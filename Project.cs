@@ -8,8 +8,8 @@ public record Project
 	////Paths relative to wwwroot/Images/ for images for this project. 
 	public List<string>? imagePaths;
 
-	public DateTime startDate;
+	public DateOnly startDate;
 
 	///If null, still working on project.
-	public DateTime? endDate;
+	public DateOnly? endDate;
 }
