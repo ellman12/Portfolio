@@ -1,20 +1,25 @@
-﻿.title {
+﻿* {
+    user-select: none;
+}
+
+.title {
     text-align: center;
 }
 
 #projects {
     width: 1200px;
-    height: 1000px;
     margin: 50px auto 0;
-    border: 2px solid white;
-    border-radius: 4px;
     display: flex;
     flex-direction: column;
 }
 
 #projects > .project {
-    background-color: red;
+    border: 2px solid white;
+    border-radius: 4px;
     padding: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 #projects > .project > .images {
@@ -32,4 +37,6 @@
 }
 
 #projects > .project > .longDesc {
+    display: none;
+    white-space: pre-line; /* https://stackoverflow.com/questions/39325414/line-break-in-html-with-n */
 }
