@@ -3,7 +3,7 @@
 ///Stores information about a project.
 public record Project
 {
-	public string name, briefDesc, longDesc;
+	public string name = null!, briefDesc = null!, longDesc = null!;
 	
 	////Paths relative to wwwroot/Images/ for images for this project. 
 	public List<string>? imagePaths;
