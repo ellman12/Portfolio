@@ -1,3 +1,42 @@
 ﻿@page "/"
 
-<h1>Hello, world!</h1>
+<link href="css/Index.css" rel="stylesheet">
+
+<h1 class="title">Elliott DuCharme's Portfolio</h1>
+<h2 class="title">Hello! 👋</h2>
+<h2 class="title">All of my projects I've produced over the years. Click the descriptions to get more info.</h2>
+
+<div id="projects">
+	@for (int i = 0; i < projects.Count; i++)
+	{
+		Project p = projects[i];
+		<div class="project">
+			<span id="name @i" class="name">@p.name</span>
+			
+			<div class="images">
+				@if (p.imagePaths?.Count > 0)
+				{
+					foreach (string path in p.imagePaths)
+					{
+						<img title="Click for Full Size Preview" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="Images/@path"/>
+					}
+				}
+			</div>
+			
+			<span class="history">@p.startDate &#8211; @(p.endDate == null ? "Present" : p.endDate)</span>
+			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@p.briefDesc</span>
+			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@p.longDesc</span>
+		</div>
+	}
+</div>
+
+<div id="contactInfo">
+	<span>You can reach me at:</span>
+	<span>ellduc4@gmail.com</span>
+	<span>elliott.ducharme@trojans.dsu.edu</span>
+	<span>507-858-9061</span>
+</div>
+
+@code{
+	private static readonly List<Project> projects = Project.GetProjects();
+}

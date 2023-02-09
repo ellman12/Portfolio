@@ -1,0 +1,70 @@
+* {
+    user-select: none;
+}
+
+.title {
+    text-align: center;
+}
+
+#projects {
+    width: 1400px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > .project {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > .project > .name {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#projects > .project > .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#projects > .project > .images > img {
+    margin-right: 50px;
+    width: 660px;
+}
+
+#projects > .project > .images > img:last-child {
+    margin-right: 0;
+}
+
+#projects > .project > .history {
+    margin-top: 6px;
+}
+
+#projects > .project > .briefDesc {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+#projects > .project > .longDesc {
+    display: none;
+    white-space: pre-line; /* https://stackoverflow.com/questions/39325414/line-break-in-html-with-n */
+}
+
+#contactInfo {
+    width: 300px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactInfo > span {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
