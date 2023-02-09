@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 
 <link href="css/Index.css" rel="stylesheet">
 
@@ -18,7 +18,7 @@
 				{
 					foreach (string path in p.imagePaths)
 					{
-						<img src="Images/@path" alt=""/>
+						<img title="Click for Full Size Preview" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="Images/@path"/>
 					}
 				}
 			</div>
