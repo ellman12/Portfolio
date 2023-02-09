@@ -23,6 +23,7 @@
 				}
 			</div>
 			
+			<span class="history">@p.startDate &#8211; @(p.endDate == null ? "Present" : p.endDate)</span>
 			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@p.briefDesc</span>
 			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@p.longDesc</span>
 		</div>
@@ -53,7 +54,9 @@
 			{
 				"PSS/Screenshot 2023-02-09 115029.png",
 				"PSS/Screenshot 2023-02-09 115057.png"
-			}
+			},
+			startDate = new DateOnly(2020, 10, 16),
+			endDate = null
 		},
 		new Project
 		{

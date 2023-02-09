@@ -39,9 +39,16 @@
 
 #projects > .project > .name {
     font-size: 35px;
+    margin-bottom: 10px;
+}
+
+#projects > .project > .history {
+    margin-top: 6px;
 }
 
 #projects > .project > .briefDesc {
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 #projects > .project > .longDesc {
