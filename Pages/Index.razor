@@ -2,4 +2,42 @@
 
 <link href="css/Index.css" rel="stylesheet">
 
-<h1>Hello, world!</h1>
+<h1 class="title">Elliott's Portfolio</h1>
+<h2 class="title">Hello! 👋</h2>
+<h2 class="title">All of my projects I've produced over the years.</h2>
+
+<div id="projects">
+	@foreach (Project p in projects)
+	{
+		<div class="project">
+			@if (p.imagePaths?.Count > 0)
+			{
+				foreach (string img in p.imagePaths)
+				{
+				}
+			}
+			<span class="name">@p.name</span>
+		</div>
+	}
+</div>
+
+@code{
+
+	private static readonly List<Project> projects = new()
+	{
+		new Project
+		{
+			name = "Photos Storage Server",
+			briefDesc = "A locally hosted photo and video manager, designed as a replacement for Google Photos.",
+			longDesc = "",
+			imagePaths = new List<string>()
+		}
+	};
+
+	protected override void OnAfterRender(bool firstRender)
+    {
+		Console.WriteLine("asdjsahjk");
+		Console.WriteLine(projects.Count);
+	}
+
+}

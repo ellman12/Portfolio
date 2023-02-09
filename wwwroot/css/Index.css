@@ -1,0 +1,35 @@
+﻿.title {
+    text-align: center;
+}
+
+#projects {
+    width: 1200px;
+    height: 1000px;
+    margin: 50px auto 0;
+    border: 2px solid white;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > .project {
+    background-color: red;
+    padding: 10px;
+}
+
+#projects > .project > .images {
+}
+
+#projects > .project > .images > img {
+
+}
+
+#projects > .project > .name {
+    font-size: 35px;
+}
+
+#projects > .project > .briefDesc {
+}
+
+#projects > .project > .longDesc {
+}
