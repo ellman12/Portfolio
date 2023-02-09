@@ -1,10 +1,10 @@
-@page "/"
+﻿@page "/"
 
 <link href="css/Index.css" rel="stylesheet">
 
 <h1 class="title">Elliott DuCharme's Portfolio</h1>
 <h2 class="title">Hello! 👋</h2>
-<h2 class="title">All of my projects I've produced over the years. Click the descriptions to expand them.</h2>
+<h2 class="title">All of my projects I've produced over the years. Click the descriptions to get more info.</h2>
 
 <div id="projects">
 	@for (int i = 0; i < projects.Count; i++)
@@ -38,35 +38,5 @@
 </div>
 
 @code{
-	private static readonly List<Project> projects = new()
-	{
-		new Project
-		{
-			name = "Photos Storage Server (PSS)",
-			briefDesc = "A locally hosted photo and video manager written in C# and Blazor Server, designed as a replacement for Google Photos.",
-			longDesc = @"this is a line
-
-
-
-
-						this is another line",
-			imagePaths = new List<string>
-			{
-				"PSS/Screenshot 2023-02-09 115029.png",
-				"PSS/Screenshot 2023-02-09 115057.png"
-			},
-			startDate = new DateOnly(2020, 10, 16),
-			endDate = null
-		},
-		new Project
-		{
-			name = "Graphical Photo Organizer (GPO)",
-			briefDesc = "A C# WPF app for organizing folders of photos and videos based on the date they were taken.",
-			longDesc = @"BBBBBBBBBBBBBBBBBBBBBB",
-			imagePaths = new List<string>
-			{
-				"GPO/Screenshot 2023-02-09 115057.png"
-			}
-		}
-	};
+	private static readonly List<Project> projects = Project.GetProjects();
 }
