@@ -21,12 +21,20 @@ public record Project
 			{
 				name = "Photos Storage Server (PSS)",
 				briefDesc = "A locally hosted photo and video manager written in C# and Blazor Server, designed as a replacement for Google Photos.",
-				longDesc = @"this is a line
+				longDesc = @"Photos Storage Server is a free and open source replacement for Google Photos, intended to be hosted on the local network, and used by a single person. Under the hood it uses a PostgreSQL database. This database stores things like: what items are in your library, the paths to those items, what albums/folders you have and their contents, when items were taken, etc. PSS has been out for a while now, and I'm still updating and improving it to this day. Since starting PSS, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I have also gotten a ton of experience with C#, and I think this project is what caused me to love C#. I am very proud with how far this project has come;  at over 1,200 commits, it's my largest personal project ever.
 
+				PSS has a lot of really nice features that aren't found in Google Photos:
+				• Folders, which act like Google Photos' Archive feature, but you can have as many as you want.
+				• Import page, which allows you to control the filename, date taken, and other data about items before they're added to your library. You can even add items to albums/folders from this page. In Google Photos you don't get this kind of control. It also warns you if you're trying to add items to your library that are already in your library.
+				• Easily create and export backups of your library, allowing you to easily return your library to that point in time.
+				• Items don't require a Date Taken value like in Google Photos. Useful for if you don't know when an item was taken.
 
+				The idea of PSS came into existence around October of 2020, when Google announced they were ending their free and unlimited tier of Photos in July of 2021. This was problematic as I had been relying on Photos since its initial release. Over those next few months and over the summer, I began the initial development of PSS. I started learning HTML, CSS, JavaScript, Blazor, and PostgreSQL. The initial development of PSS is split up into three phases, which I've used repeatedly in future web projects:
 
-
-						this is another line",
+				Phase 1 was learning SQL and determining the structure of the database. In the early days, the database was in MySQL, but I upgraded to PostgreSQL a lot later. Having the database figured out before writing any backend code worked so well that this is now the first step I always take when making a new web app that has a database.
+				Phase 2 was writing the backend methods in C# which would interface with the database. This made it very easy on the frontend as I could get/set data in the database and it was all abstracted away.
+				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every future web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.",
+				
 				imagePaths = new List<string>
 				{
 					"PSS/Screenshot 2023-02-09 115029.png",
