@@ -40,3 +40,16 @@
     display: none;
     white-space: pre-line; /* https://stackoverflow.com/questions/39325414/line-break-in-html-with-n */
 }
+
+#contactInfo {
+    width: 300px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactInfo > span {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
