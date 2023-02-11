@@ -34,8 +34,8 @@
 }
 
 #projects > .project > .images > img {
-    margin-right: 50px;
-    width: 660px;
+    margin-right: 20px;
+    max-height: 357px;
 }
 
 #projects > .project > .images > img:last-child {
