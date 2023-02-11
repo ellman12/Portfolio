@@ -1,6 +1,6 @@
 ﻿@page "/"
 
-<link href="css/Index.css" rel="stylesheet">
+<link href="css/Index.css" rel="stylesheet"/>
 
 <h1 class="title">Elliott DuCharme's Portfolio</h1>
 <h2 class="title">Hello! 👋</h2>
@@ -14,7 +14,7 @@
 			<span id="name @i" class="name">@p.name</span>
 			
 			<div class="images">
-				@if (p.imagePaths?.Count > 0)
+				@if (p.imagePaths?.Length > 0)
 				{
 					foreach (string path in p.imagePaths)
 					{
