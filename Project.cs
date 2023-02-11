@@ -6,7 +6,7 @@ public record Project
 	public string name = null!, briefDesc = null!, longDesc = null!;
 	
 	////Paths relative to wwwroot/Images/ for images for this project. 
-	public List<string>? imagePaths;
+	public string[]? imagePaths;
 
 	public DateOnly startDate;
 
@@ -35,11 +35,7 @@ public record Project
 				Phase 2 was writing the backend methods in C# which would interface with the database. This made it very easy on the frontend as I could get/set data in the database and it was all abstracted away.
 				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every future web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.",
 				
-				imagePaths = new List<string>
-				{
-					"PSS/Screenshot 2023-02-09 115029.png",
-					"PSS/Screenshot 2023-02-09 115057.png"
-				},
+				imagePaths = new[] {"PSS/Screenshot 2023-02-09 115029.png", "PSS/Screenshot 2023-02-09 115057.png"},
 				startDate = new DateOnly(2020, 10, 16),
 				endDate = null
 			},
@@ -48,20 +44,14 @@ public record Project
 				name = "Graphical Photo Organizer (GPO)",
 				briefDesc = "A C# WPF app for organizing folders of photos and videos based on the date they were taken.",
 				longDesc = @"BBBBBBBBBBBBBBBBBBBBBB",
-				imagePaths = new List<string>
-				{
-					"GPO/Screenshot 2023-02-09 115057.png"
-				}
+				imagePaths = new[] {"GPO/Screenshot 2023-02-09 115057.png"}
 			},
 			new()
 			{
 				name = "AutoHotkey Scripts",
 				briefDesc = "Extensive repository of AutoHotkey scripts automating many repetitive daily computer tasks.",
 				longDesc = @"",
-				imagePaths = new List<string>
-				{
-				
-				}
+				imagePaths = new[] { "//TODO: some pics of keeb, SDXL, etc." }
 			}
 		};
 	}
