@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "Microsoft.AspNetCore.Components.dll": "sha256-NjmB2PrlbbMuiCYnVKQr7TS\/8AVwPe1EAhX1UvtH2RE=",
+      "Microsoft.AspNetCore.Components.dll": "sha256-dMsuANlgL8OAZh\/N+vaD8MLdecVYEUk16yGY4nbA0Lk=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-+B+Dw0exFpLLKnjfJM4i3\/oCk0S9vAPAWW4+uwMs5h8=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-jj0gEWGz0IP5DtImmDS2JCnL7nDJvw39GXaOgt9q2BU=",
       "Microsoft.Extensions.Configuration.Abstractions.dll": "sha256-X\/f4fDl2cuIRXeWHhK\/f2UqQbFioD+RU4a4CEh0zrrQ=",
@@ -21,7 +21,7 @@
       "Microsoft.Extensions.Primitives.dll": "sha256-eXvGx2jcjpTPEJoAHBsW\/VuMPbNyyU+AsuhPmkzSSRY=",
       "Microsoft.JSInterop.dll": "sha256-iSrG4aIfEw\/shiDFTk82\/yE+3T0mcwYqbjHC7vTJBYc=",
       "Microsoft.JSInterop.WebAssembly.dll": "sha256-bn\/jJGkSeaQbmqAl6uUM0y1joLrVEzldOc3y5mscYMk=",
-      "Portfolio.dll": "sha256-xDT0R\/u0pOEbWxi4xylwiQOn9B\/obmrsH2buSdCHPMw=",
+      "Portfolio.dll": "sha256-WL4tO3KxnJKL+OnozqeNzeo29p5FzBjsTo6odkcp7+E=",
       "System.Collections.Concurrent.dll": "sha256-JzzEy0kwTr5TE3x\/sapHh4jtjpDvfmuc\/ch1FMtjILM=",
       "System.Collections.dll": "sha256-0o4olsWngsz0\/6e41pS1fxExdlBXJEfBgz2uuJmECjA=",
       "System.ComponentModel.dll": "sha256-Ai6Dlg1M21zcB936W5gTAjo76y3+XiR4JS1iNPR0ENA=",

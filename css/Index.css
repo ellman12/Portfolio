@@ -54,6 +54,8 @@
 #projects > .project > .longDesc {
     display: none;
     white-space: pre-line; /* https://stackoverflow.com/questions/39325414/line-break-in-html-with-n */
+    line-height: 2;
+    font-size: 17px;
 }
 
 #contactInfo {
