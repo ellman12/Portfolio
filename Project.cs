@@ -75,6 +75,19 @@ public record Project
 							The theme for 2023 was 'Roots.' Our game involves the player diving down into the roots of a giant tree and purifying the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
 				startDate = new DateOnly(2023, 2, 3),
 				endDate = new DateOnly(2023, 2, 5)
+			},
+			new()
+			{
+				name = "Password Generator and Guesser (PGG)",
+				briefDesc = "A highly-customizable, superfluous, and over-engineered C++ console application for generating and guessing strings of characters.",
+				longDesc = @"Password Generator and Guesser is a simple C++ console application that either generates a ""password"" (string of characters) based on various customizable rules, or is supplied one by the user. It then takes that string and uses one of several approaches to try and guess it as quickly as possible.
+
+				There are a lot of different arguments you can pass to it to control how it operates. The idea for this project came to me one day during my Software Security class. We were talking about passwords and the professor mentioned something along the lines of guessing and checking a password over and over, and a light bulb went off in my head and I knew I had to try making that. Around that time I also wanted to get experience adding command line arguments (flags) to a project, so I figured I would combine both into one.
+
+				Overall, the project is more for testing and experimentation versus being useful.",
+				imagePaths = new []{""}, //TODO: add images here and to repo readme too
+				startDate = new DateOnly(2021, 3, 24),
+				endDate = new DateOnly(2021, 10, 21)
 			}
 		};
 	}
