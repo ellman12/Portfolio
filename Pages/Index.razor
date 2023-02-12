@@ -24,8 +24,8 @@
 			</div>
 			
 			<span class="history">@p.startDate &#8211; @(p.endDate == null ? "Present" : p.endDate)</span>
-			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@p.briefDesc</span>
-			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@p.longDesc</span>
+			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@((MarkupString)p.briefDesc)</span>
+			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@((MarkupString)p.longDesc)</span>
 		</div>
 	}
 </div>
