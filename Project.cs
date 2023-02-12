@@ -45,7 +45,7 @@ public record Project
 				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when they were taken.",
 				longDesc = @"GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
 				imagePaths = new[] {"GPO/GPO1.png", "GPO/GPO2.png"},
-				startDate = new DateOnly(2021, 2, 21),
+				startDate = new DateOnly(2022, 2, 21),
 				endDate = new DateOnly(2022, 6, 14)
 			},
 			new()
@@ -114,7 +114,7 @@ public record Project
 				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
 				//imagePaths TODO? Pics of calculator, programs, etc.
 				startDate = new DateOnly(2020, 4, 16),
-				endDate = new DateOnly(2020, 4, 19)
+				endDate = new DateOnly(2021, 4, 29)
 			}
 		};
 	}
