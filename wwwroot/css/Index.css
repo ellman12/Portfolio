@@ -37,15 +37,27 @@
     flex-direction: column;
 }
 
-#projects > .project > .name {
+#projects > .project > .header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#projects > .project > .header > .name {
     font-size: 35px;
-    margin-bottom: 10px;
+}
+
+#projects > .project > .header > .history {
+    position: absolute;
+    right: 10px;
 }
 
 #projects > .project > .images {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    margin-top: 10px;
 }
 
 #projects > .project > .images > img {
@@ -55,10 +67,6 @@
 
 #projects > .project > .images > img:last-child {
     margin-right: 0;
-}
-
-#projects > .project > .history {
-    margin-top: 6px;
 }
 
 #projects > .project > .briefDesc {
