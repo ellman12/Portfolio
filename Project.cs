@@ -21,7 +21,7 @@ public record Project
 			{
 				name = "Photos Storage Server (PSS)",
 				briefDesc = "A locally hosted photo and video manager written in C# and Blazor Server, designed as a replacement for Google Photos.",
-				longDesc = @"Photos Storage Server is a free and open source replacement for Google Photos, intended to be hosted on the local network, and used by a single person. Under the hood it uses a PostgreSQL database. This database stores things like: what items are in your library, the paths to those items, what albums/folders you have and their contents, when items were taken, etc. PSS has been out for a while now, and I'm still updating and improving it to this day. Since starting PSS, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I have also gotten a ton of experience with C#, and I think this project is what caused me to love C#. I am very proud with how far this project has come;  at over 1,200 commits, it's my largest personal project ever.
+				longDesc = @"Photos Storage Server is a free and open source replacement for Google Photos, intended to be hosted on the local network, and used by a single person. Under the hood it uses a PostgreSQL database, which stores things like: what items are in your library, the paths to those items, what albums/folders you have and their contents, when items were taken, etc. PSS has been out for a while now, and I'm still updating and improving it to this day. Since starting PSS, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I have also gotten a ton of experience with C#, and I think this project is what caused me to fall in love with C#. I am very proud with how far this project has come; at over 1,200 commits, it's my largest personal project ever.
 
 				PSS has a lot of really nice features that aren't found in Google Photos:
 				• Folders, which act like Google Photos' Archive feature, but you can have as many as you want.
@@ -33,7 +33,9 @@ public record Project
 
 				Phase 1 was learning SQL and determining the structure of the database. In the early days, the database was in MySQL, but I upgraded to PostgreSQL a lot later. Having the database figured out before writing any backend code worked so well that this is now the first step I always take when making a new web app that has a database.
 				Phase 2 was writing the backend methods in C# which would interface with the database. This made it very easy on the frontend as I could get/set data in the database and it was all abstracted away.
-				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.",
+				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.
+
+				PSS was my first web app project ever, and I'm very proud of how far it's come over the years.",
 				
 				imagePaths = new[] {"PSS/Screenshot 2023-02-09 115029.png", "PSS/Screenshot 2023-02-09 115057.png"},
 				startDate = new DateOnly(2020, 10, 16),
@@ -93,6 +95,16 @@ public record Project
 				imagePaths = new []{"DTE/DTE1.png"},
 				startDate = new DateOnly(2022, 5, 4),
 				endDate = new DateOnly(2023, 1, 5)
+			},
+			new()
+			{
+				name = "Graphical Backup Program (GBP)",
+				briefDesc = "A C# WinForms utility for backing up groups of files and folders on a Windows PC.",
+				longDesc = @"Graphical Backup Program is a WinForms utility for backing up groups of folders and files, designed primarily to make it easy to backup items to an online service like Google Drive or OneDrive, and to make it easy to create groups of related items and give control of which of those groups are backed up. It can also compress backups to a .zip file, and open a web URL upon completion of a backup. GBP was my first experience creating a GUI project, and I'm very happy with how it turned out as I think the interface is simple enough for anyone to use and understand, while also giving the user a lot of customization and power.",
+				imagePaths = new []{"GBP/GBP_GUI.png"},
+				startDate = new DateOnly(2021, 7, 24),
+				endDate = new DateOnly(2022, 2, 21)
+				
 			},
 			new()
 			{
