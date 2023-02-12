@@ -60,9 +60,27 @@ public record Project
 				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
 
 				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
-				imagePaths = new[] { "TODO: get picture(s)" },
+				imagePaths = new[] { "" }, //TODO: get picture(s)
 				startDate = new DateOnly(2019, 10, 8),
 				endDate = null,
+				significance = 85
+			},
+			new()
+			{
+				name = "Dish Up", //todo: https://bitbucket.org/dpdsu/csc-470-project-repo/src/master/
+				briefDesc = "Blazor Server app for creating, storing, viewing, and sharing recipes with other users.",
+				longDesc = @"Dish Up is what myself and three other people produced for our Software Engineering class's final project. It is a recipe manager written in Blazor Server and powered by a PostgreSQL database. One big emphasis this project had was being able to easily share recipes with other users. I pitched the original idea and took the role of the product manager and team leader.
+
+				I had four observations/thoughts over the years that led me to develop the idea for the project:
+				1) Recipe books can be and usually are enormous,
+				2) Organizing them and keeping them that way is very difficult and time-consuming,
+				3) Trying to actually <i>find</i> what you want in a recipe book can become a needle in a haystack,
+				4) If you want to share a recipe with someone, you either have to print it out and hand-deliver it to them, (e-)mail it, etc.
+
+				So I thought to myself, 'having a digital recipe manager with an emphasis on easily sharing items would be a perfect project.' That feature itself was probably inspired by Google Photos' sharing abilities.",
+				imagePaths = new[] { "" }, //TODO: get picture(s)
+				startDate = new DateOnly(2019, 10, 8),
+				endDate = new DateOnly(2022, 12, 16),
 				significance = 90
 			},
 			new()
@@ -96,6 +114,16 @@ public record Project
 				imagePaths = new []{""}, //TODO: add images here and to repo readme too
 				startDate = new DateOnly(2021, 3, 24),
 				endDate = new DateOnly(2021, 10, 21),
+				significance = 5
+			},
+			new()
+			{
+				name = "TI-Basic Scripts",
+				briefDesc = "Various scripts to automate my Scripts to automate my TI-84 Plus CE graphing calculator",
+				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
+				//imagePaths TODO? Pics of calculator, programs, etc.
+				startDate = new DateOnly(2020, 4, 16),
+				endDate = new DateOnly(2020, 4, 19),
 				significance = 1
 			}
 		};
