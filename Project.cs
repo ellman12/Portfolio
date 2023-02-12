@@ -66,6 +66,15 @@ public record Project
 				longDesc = @"DateTakenExtractor (DTE) is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
 				startDate = new DateOnly(2022, 5, 4),
 				endDate = new DateOnly(2022, 1, 5)
+			},
+			new()
+			{
+				name = "The Blighted Wilds",
+				briefDesc = "A game I and nine other people made for Global Game Jam 2023.",
+				longDesc = @"<iframe src='https://i.simmer.io/@GameJam/the-blighted-wilds' style='width: 960px; height: 600px; border: none; margin-top: 4px'></iframe>
+							The theme for 2023 was 'Roots.' Our game involves the player diving down into the roots of a giant tree and purifying the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
+				startDate = new DateOnly(2023, 2, 3),
+				endDate = new DateOnly(2023, 2, 5)
 			}
 		};
 	}
