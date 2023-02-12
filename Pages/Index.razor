@@ -27,8 +27,11 @@
 	{
 		Project p = projects[i];
 		<div class="project">
-			<span id="name @i" class="name">@p.name</span>
-			
+			<div class="header">
+				<span id="name @i" class="name">@p.name</span>
+				<span class="history">@p.startDate &#8211; @(p.endDate == null ? "Present" : p.endDate)</span>
+			</div>
+
 			<div class="images">
 				@if (p.imagePaths?.Length > 0)
 				{
@@ -38,10 +41,9 @@
 					}
 				}
 			</div>
-			
-			<span class="history">@p.startDate &#8211; @(p.endDate == null ? "Present" : p.endDate)</span>
-			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@((MarkupString)p.briefDesc)</span>
-			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@((MarkupString)p.longDesc)</span>
+
+			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@((MarkupString) p.briefDesc)</span>
+			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@((MarkupString) p.longDesc)</span>
 		</div>
 	}
 </div>
