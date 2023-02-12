@@ -88,6 +88,7 @@ public record Project
 				name = "DateTakenExtractor",
 				briefDesc = "Small, fast, simple library for reading and writing Date Taken metadata for photos and videos.",
 				longDesc = @"DateTakenExtractor (DTE) is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
+				imagePaths = new []{"DTE/DTE1.png"},
 				startDate = new DateOnly(2022, 5, 4),
 				endDate = new DateOnly(2022, 1, 5),
 				significance = 65
