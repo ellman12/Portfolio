@@ -13,6 +13,9 @@ public record Project
 	///If null, still working on project.
 	public DateOnly? endDate;
 
+	///Higher the number, the more significant it is.
+	public int significance;
+
 	public static List<Project> GetProjects()
 	{
 		return new List<Project>
@@ -37,7 +40,8 @@ public record Project
 				
 				imagePaths = new[] {"PSS/Screenshot 2023-02-09 115029.png", "PSS/Screenshot 2023-02-09 115057.png"},
 				startDate = new DateOnly(2020, 10, 16),
-				endDate = null
+				endDate = null,
+				significance = 100
 			},
 			new()
 			{
@@ -46,7 +50,8 @@ public record Project
 				longDesc = @"GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
 				imagePaths = new[] {"GPO/GPO1.png", "GPO/GPO2.png"},
 				startDate = new DateOnly(2021, 2, 21),
-				endDate = new DateOnly(2022, 6, 14)
+				endDate = new DateOnly(2022, 6, 14),
+				significance = 80
 			},
 			new()
 			{
@@ -57,7 +62,8 @@ public record Project
 				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
 				imagePaths = new[] { "TODO: get picture(s)" },
 				startDate = new DateOnly(2019, 10, 8),
-				endDate = null
+				endDate = null,
+				significance = 90
 			},
 			new()
 			{
@@ -65,7 +71,8 @@ public record Project
 				briefDesc = "Small, fast, simple library for reading and writing Date Taken metadata for photos and videos.",
 				longDesc = @"DateTakenExtractor (DTE) is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
 				startDate = new DateOnly(2022, 5, 4),
-				endDate = new DateOnly(2022, 1, 5)
+				endDate = new DateOnly(2022, 1, 5),
+				significance = 65
 			},
 			new()
 			{
@@ -74,7 +81,8 @@ public record Project
 				longDesc = @"<iframe src='https://i.simmer.io/@GameJam/the-blighted-wilds' style='width: 960px; height: 600px; border: none; margin-top: 4px'></iframe>
 							The theme for 2023 was 'Roots.' Our game involves the player diving down into the roots of a giant tree and purifying the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
 				startDate = new DateOnly(2023, 2, 3),
-				endDate = new DateOnly(2023, 2, 5)
+				endDate = new DateOnly(2023, 2, 5),
+				significance = 70
 			},
 			new()
 			{
@@ -87,7 +95,8 @@ public record Project
 				Overall, the project is more for testing and experimentation versus being useful.",
 				imagePaths = new []{""}, //TODO: add images here and to repo readme too
 				startDate = new DateOnly(2021, 3, 24),
-				endDate = new DateOnly(2021, 10, 21)
+				endDate = new DateOnly(2021, 10, 21),
+				significance = 1
 			}
 		};
 	}
