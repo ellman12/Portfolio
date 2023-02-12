@@ -1,4 +1,4 @@
-﻿@page "/"
+@page "/"
 
 <link href="css/Index.css" rel="stylesheet"/>
 
@@ -6,8 +6,21 @@
 <h2 class="title">Hello! 👋</h2>
 <h2 class="title">
 	I am a Senior at Dakota State University majoring in Computer Science, and I will be graduating May 2023.<br>
-	What follows is a listing of all my projects I've developed over the years.
+	What follows is a listing of all my projects I've developed over the years. Click their descriptions to show more info about them.
 </h2>
+
+<div id="sortControls">
+	<select @bind="@sortMode" @bind:after="@SortModeUpdated">
+		<option value="Name">Name</option>
+		<option value="StartDate">StartDate</option>
+		<option value="EndDate">EndDate</option>
+	</select>
+
+	<select @bind="@sorting" @bind:after="@SortModeUpdated">
+		<option value="Ascending">Ascending</option>
+		<option value="Descending">Descending</option>
+	</select>
+</div>
 
 <div id="projects">
 	@for (int i = 0; i < projects.Count; i++)
@@ -41,5 +54,31 @@
 </div>
 
 @code{
-	private static readonly List<Project> projects = Project.GetProjects();
+	private List<Project> projects = Project.GetProjects();
+	private SortMode sortMode;
+	private string sorting = "Descending";
+
+	private void SortModeUpdated()
+	{
+		if (sorting == "Descending")
+		{
+			projects = sortMode switch {
+				SortMode.Name => projects.OrderByDescending(p => p.name).ToList(),
+				SortMode.StartDate => projects.OrderByDescending(p => p.startDate).ToList(),
+				SortMode.EndDate => projects.OrderByDescending(p => p.endDate).ToList(),
+				_ => throw new ArgumentOutOfRangeException()
+			};
+		}
+		else if (sorting == "Ascending")
+		{
+			projects = sortMode switch {
+				SortMode.Name => projects.OrderBy(p => p.name).ToList(),
+				SortMode.StartDate => projects.OrderBy(p => p.startDate).ToList(),
+				SortMode.EndDate => projects.OrderBy(p => p.endDate).ToList(),
+				_ => throw new ArgumentOutOfRangeException()
+			};
+		}
+		
+		StateHasChanged();
+	}
 }

@@ -13,9 +13,6 @@ public record Project
 	///If null, still working on project.
 	public DateOnly? endDate;
 
-	///Higher the number, the more significant it is.
-	public int significance;
-
 	public static List<Project> GetProjects()
 	{
 		return new List<Project>
@@ -24,7 +21,7 @@ public record Project
 			{
 				name = "Photos Storage Server (PSS)",
 				briefDesc = "A locally hosted photo and video manager written in C# and Blazor Server, designed as a replacement for Google Photos.",
-				longDesc = @"Photos Storage Server is a free and open source replacement for Google Photos, intended to be hosted on the local network, and used by a single person. Under the hood it uses a PostgreSQL database. This database stores things like: what items are in your library, the paths to those items, what albums/folders you have and their contents, when items were taken, etc. PSS has been out for a while now, and I'm still updating and improving it to this day. Since starting PSS, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I have also gotten a ton of experience with C#, and I think this project is what caused me to love C#. I am very proud with how far this project has come;  at over 1,200 commits, it's my largest personal project ever.
+				longDesc = @"Photos Storage Server is a free and open source replacement for Google Photos, intended to be hosted on the local network, and used by a single person. Under the hood it uses a PostgreSQL database, which stores things like: what items are in your library, the paths to those items, what albums/folders you have and their contents, when items were taken, etc. PSS has been out for a while now, and I'm still updating and improving it to this day. Since starting PSS, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I have also gotten a ton of experience with C#, and I think this project is what caused me to fall in love with C#. I am very proud with how far this project has come; at over 1,200 commits, it's my largest personal project ever.
 
 				PSS has a lot of really nice features that aren't found in Google Photos:
 				• Folders, which act like Google Photos' Archive feature, but you can have as many as you want.
@@ -36,12 +33,13 @@ public record Project
 
 				Phase 1 was learning SQL and determining the structure of the database. In the early days, the database was in MySQL, but I upgraded to PostgreSQL a lot later. Having the database figured out before writing any backend code worked so well that this is now the first step I always take when making a new web app that has a database.
 				Phase 2 was writing the backend methods in C# which would interface with the database. This made it very easy on the frontend as I could get/set data in the database and it was all abstracted away.
-				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.",
+				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.
+
+				PSS was my first web app project ever, and I'm very proud of how far it's come over the years.",
 				
 				imagePaths = new[] {"PSS/Screenshot 2023-02-09 115029.png", "PSS/Screenshot 2023-02-09 115057.png"},
 				startDate = new DateOnly(2020, 10, 16),
-				endDate = null,
-				significance = 100
+				endDate = null
 			},
 			new()
 			{
@@ -49,21 +47,8 @@ public record Project
 				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when they were taken.",
 				longDesc = @"GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
 				imagePaths = new[] {"GPO/GPO1.png", "GPO/GPO2.png"},
-				startDate = new DateOnly(2021, 2, 21),
-				endDate = new DateOnly(2022, 6, 14),
-				significance = 80
-			},
-			new()
-			{
-				name = "AutoHotkey Scripts",
-				briefDesc = "Extensive repository of AutoHotkey scripts automating many repetitive daily computer tasks.",
-				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
-
-				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
-				imagePaths = new[] { "" }, //TODO: get picture(s)
-				startDate = new DateOnly(2019, 10, 8),
-				endDate = null,
-				significance = 85
+				startDate = new DateOnly(2022, 2, 21),
+				endDate = new DateOnly(2022, 6, 14)
 			},
 			new()
 			{
@@ -79,28 +64,47 @@ public record Project
 
 				So I thought to myself, 'having a digital recipe manager with an emphasis on easily sharing items would be a perfect project.' That feature itself was probably inspired by Google Photos' sharing abilities.",
 				imagePaths = new[] { "" }, //TODO: get picture(s)
-				startDate = new DateOnly(2019, 10, 8),
-				endDate = new DateOnly(2022, 12, 16),
-				significance = 90
+				startDate = new DateOnly(2022, 10, 8),
+				endDate = new DateOnly(2022, 12, 16)
 			},
 			new()
 			{
-				name = "DateTakenExtractor",
-				briefDesc = "Small, fast, simple library for reading and writing Date Taken metadata for photos and videos.",
-				longDesc = @"DateTakenExtractor (DTE) is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
-				startDate = new DateOnly(2022, 5, 4),
-				endDate = new DateOnly(2022, 1, 5),
-				significance = 65
+				name = "AutoHotkey Scripts",
+				briefDesc = "Extensive repository of AutoHotkey scripts automating many repetitive daily computer tasks.",
+				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
+
+				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
+				imagePaths = new[] { "" }, //TODO: get picture(s)
+				startDate = new DateOnly(2019, 10, 8),
+				endDate = null
 			},
 			new()
 			{
 				name = "The Blighted Wilds",
 				briefDesc = "A game I and nine other people made for Global Game Jam 2023.",
 				longDesc = @"<iframe src='https://i.simmer.io/@GameJam/the-blighted-wilds' style='width: 960px; height: 600px; border: none; margin-top: 4px'></iframe>
-							The theme for 2023 was 'Roots.' Our game involves the player diving down into the roots of a giant tree and purifying the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
+							The theme for 2023 was 'Roots.' Our game is a 2D side-scrolling platformer where the player dives down into the roots of a giant tree and must purify the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
 				startDate = new DateOnly(2023, 2, 3),
-				endDate = new DateOnly(2023, 2, 5),
-				significance = 70
+				endDate = new DateOnly(2023, 2, 5)
+			},
+			new()
+			{
+				name = "DateTakenExtractor (DTE)",
+				briefDesc = "Small, fast, simple library for reading and writing Date Taken metadata for photos and videos.",
+				longDesc = @"DateTakenExtractor is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
+				imagePaths = new []{"DTE/DTE1.png"},
+				startDate = new DateOnly(2022, 5, 4),
+				endDate = new DateOnly(2023, 1, 5)
+			},
+			new()
+			{
+				name = "Graphical Backup Program (GBP)",
+				briefDesc = "A C# WinForms utility for backing up groups of files and folders on a Windows PC.",
+				longDesc = @"Graphical Backup Program is a WinForms utility for backing up groups of folders and files, designed primarily to make it easy to backup items to an online service like Google Drive or OneDrive, and to make it easy to create groups of related items and give control of which of those groups are backed up. It can also compress backups to a .zip file, and open a web URL upon completion of a backup. GBP was my first experience creating a GUI project, and I'm very happy with how it turned out as I think the interface is simple enough for anyone to use and understand, while also giving the user a lot of customization and power.",
+				imagePaths = new []{"GBP/GBP_GUI.png"},
+				startDate = new DateOnly(2021, 7, 24),
+				endDate = new DateOnly(2022, 2, 21)
+				
 			},
 			new()
 			{
@@ -113,8 +117,7 @@ public record Project
 				Overall, the project is more for testing and experimentation versus being useful.",
 				imagePaths = new []{""}, //TODO: add images here and to repo readme too
 				startDate = new DateOnly(2021, 3, 24),
-				endDate = new DateOnly(2021, 10, 21),
-				significance = 5
+				endDate = new DateOnly(2021, 10, 21)
 			},
 			new()
 			{
@@ -123,8 +126,7 @@ public record Project
 				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
 				//imagePaths TODO? Pics of calculator, programs, etc.
 				startDate = new DateOnly(2020, 4, 16),
-				endDate = new DateOnly(2020, 4, 19),
-				significance = 1
+				endDate = new DateOnly(2021, 4, 29)
 			}
 		};
 	}
