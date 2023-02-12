@@ -50,17 +50,6 @@ public record Project
 			},
 			new()
 			{
-				name = "AutoHotkey Scripts",
-				briefDesc = "Extensive repository of AutoHotkey scripts automating many repetitive daily computer tasks.",
-				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
-
-				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
-				imagePaths = new[] { "" }, //TODO: get picture(s)
-				startDate = new DateOnly(2019, 10, 8),
-				endDate = null
-			},
-			new()
-			{
 				name = "Dish Up", //todo: https://bitbucket.org/dpdsu/csc-470-project-repo/src/master/
 				briefDesc = "Blazor Server app for creating, storing, viewing, and sharing recipes with other users.",
 				longDesc = @"Dish Up is what myself and three other people produced for our Software Engineering class's final project. It is a recipe manager written in Blazor Server and powered by a PostgreSQL database. One big emphasis this project had was being able to easily share recipes with other users. I pitched the original idea and took the role of the product manager and team leader.
@@ -78,12 +67,14 @@ public record Project
 			},
 			new()
 			{
-				name = "DateTakenExtractor",
-				briefDesc = "Small, fast, simple library for reading and writing Date Taken metadata for photos and videos.",
-				longDesc = @"DateTakenExtractor (DTE) is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
-				imagePaths = new []{"DTE/DTE1.png"},
-				startDate = new DateOnly(2022, 5, 4),
-				endDate = new DateOnly(2022, 1, 5)
+				name = "AutoHotkey Scripts",
+				briefDesc = "Extensive repository of AutoHotkey scripts automating many repetitive daily computer tasks.",
+				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
+
+				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
+				imagePaths = new[] { "" }, //TODO: get picture(s)
+				startDate = new DateOnly(2019, 10, 8),
+				endDate = null
 			},
 			new()
 			{
@@ -93,6 +84,15 @@ public record Project
 							The theme for 2023 was 'Roots.' Our game is a 2D side-scrolling platformer where the player dives down into the roots of a giant tree and must purify the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
 				startDate = new DateOnly(2023, 2, 3),
 				endDate = new DateOnly(2023, 2, 5)
+			},
+			new()
+			{
+				name = "DateTakenExtractor",
+				briefDesc = "Small, fast, simple library for reading and writing Date Taken metadata for photos and videos.",
+				longDesc = @"DateTakenExtractor (DTE) is a small, fast, simple library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,700 downloads which I'm very proud about.",
+				imagePaths = new []{"DTE/DTE1.png"},
+				startDate = new DateOnly(2022, 5, 4),
+				endDate = new DateOnly(2022, 1, 5)
 			},
 			new()
 			{
