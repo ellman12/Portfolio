@@ -6,6 +6,21 @@
     text-align: center;
 }
 
+#sortControls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 220px;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+#sortControls > select {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
 #projects {
     width: 1400px;
     margin: 50px auto 0;
