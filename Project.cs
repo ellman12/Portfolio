@@ -6,7 +6,7 @@ public record Project
 	public string name = null!, repoLink = null!, briefDesc = null!, longDesc = null!;
 	
 	////Paths relative to wwwroot/Images/ for images for this project. 
-	public string[]? imagePaths;
+	public (string, string)[]? images;
 
 	public DateOnly startDate;
 
@@ -38,7 +38,7 @@ public record Project
 
 				PSS was my first web app project ever, and I'm very proud of how far it's come over the years.",
 				
-				imagePaths = new[] {"PSS/Screenshot 2023-02-09 115029.png", "PSS/Screenshot 2023-02-09 115057.png"},
+				images = new[] {("", "")},
 				startDate = new DateOnly(2020, 10, 16),
 				endDate = null
 			},
@@ -48,7 +48,7 @@ public record Project
 				repoLink = "https://github.com/ellman12/Graphical-Photo-Organizer",
 				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when they were taken.",
 				longDesc = @"GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
-				imagePaths = new[] {"GPO/GPO1.png", "GPO/GPO2.png"},
+				images = new[] {("GPO/GPO1.png", "Main Graphical Photo Organizer Window"), ("GPO/GPO2.png", "Graphical Photo Organizer Settings Window")},
 				startDate = new DateOnly(2022, 2, 21),
 				endDate = new DateOnly(2022, 6, 14)
 			},
@@ -66,7 +66,7 @@ public record Project
 				4) If you want to share a recipe with someone, you either have to print it out and hand-deliver it to them, (e-)mail it, etc.
 
 				So I thought to myself, 'having a digital recipe manager with an emphasis on easily sharing items would be a perfect project.' That feature itself was probably inspired by Google Photos' sharing abilities.",
-				imagePaths = new[] { "" }, //TODO: get picture(s)
+				// images = new[] { "" }, //TODO: get picture(s)
 				startDate = new DateOnly(2022, 10, 8),
 				endDate = new DateOnly(2022, 12, 16)
 			},
@@ -78,7 +78,7 @@ public record Project
 				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
 
 				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
-				imagePaths = new[] { "" }, //TODO: get picture(s)
+				// images = new[] { "" }, //TODO: get picture(s)
 				startDate = new DateOnly(2019, 10, 8),
 				endDate = null
 			},
@@ -98,7 +98,7 @@ public record Project
 				repoLink = "https://github.com/ellman12/DateTakenExtractor",
 				briefDesc = "Small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos.",
 				longDesc = @"DateTakenExtractor is a small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,800 downloads which I'm very proud about.",
-				imagePaths = new []{"DTE/DTE1.png"},
+				images = new []{("DTE/DTE1.png", "Example of using Date Taken Extractor")},
 				startDate = new DateOnly(2022, 5, 4),
 				endDate = new DateOnly(2023, 1, 5)
 			},
@@ -108,7 +108,7 @@ public record Project
 				repoLink = "https://github.com/ellman12/Graphical-Backup-Program",
 				briefDesc = "A C# WinForms utility for backing up groups of files and folders on a Windows PC.",
 				longDesc = @"Graphical Backup Program is a WinForms utility for backing up groups of folders and files, designed primarily to make it easy to backup items to an online service like Google Drive or OneDrive, and to make it easy to create groups of related items and give control of which of those groups are backed up. It can also compress backups to a .zip file, and open a web URL upon completion of a backup. GBP was my first experience creating a GUI project, and I'm very happy with how it turned out as I think the interface is simple enough for anyone to use and understand, while also giving the user a lot of customization and power.",
-				imagePaths = new []{"GBP/GBP_GUI.png"},
+				images = new []{("GBP/GBP_GUI.png", "Main Graphical Backup Program Window")},
 				startDate = new DateOnly(2021, 7, 24),
 				endDate = new DateOnly(2022, 2, 21)
 				
@@ -123,7 +123,7 @@ public record Project
 				There are a lot of different arguments you can pass to it to control how it operates. The idea for this project came to me one day during my Software Security class. We were talking about passwords and the professor mentioned something along the lines of guessing and checking a password over and over, and a light bulb went off in my head and I knew I had to try making that. Around that time I also wanted to get experience adding command line arguments (flags) to a project, so I figured I would combine both into one.
 
 				Overall, the project is more for testing and experimentation versus being useful.",
-				imagePaths = new []{""}, //TODO: add images here and to repo readme too
+				// images = new []{""}, //TODO: add images here and to repo readme too
 				startDate = new DateOnly(2021, 3, 24),
 				endDate = new DateOnly(2021, 10, 21)
 			},
@@ -133,7 +133,7 @@ public record Project
 				repoLink = "https://github.com/ellman12/TI-84-Plus-CE",
 				briefDesc = "Various scripts to automate my Scripts to automate my TI-84 Plus CE graphing calculator",
 				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
-				//imagePaths TODO? Pics of calculator, programs, etc.
+				//images TODO? Pics of calculator, programs, etc.
 				startDate = new DateOnly(2020, 4, 16),
 				endDate = new DateOnly(2021, 4, 29)
 			}

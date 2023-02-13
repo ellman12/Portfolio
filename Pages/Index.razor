@@ -6,7 +6,8 @@
 <h2 class="title">Hello! 👋</h2>
 <h2 class="title">
 	I am a Senior at Dakota State University majoring in Computer Science, and I will be graduating May 2023.<br>
-	What follows is a listing of all my projects I've developed over the years. Click their descriptions to show more info about them.
+	What follows is a listing of all my projects I've developed over the years.<br>
+	Click their descriptions to show more info about them. Click the images to view them full size.
 </h2>
 
 <div id="sortControls">
@@ -33,11 +34,11 @@
 			</div>
 
 			<div class="images">
-				@if (p.imagePaths?.Length > 0)
+				@if (p.images?.Length > 0)
 				{
-					foreach (string path in p.imagePaths)
+					foreach ((string path, string altText) in p.images)
 					{
-						<img title="Click for Full Size Preview" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="Images/@path"/>
+						<img title="@altText" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="@altText"/>
 					}
 				}
 			</div>
