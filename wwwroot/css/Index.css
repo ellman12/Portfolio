@@ -69,6 +69,12 @@
     margin-right: 0;
 }
 
+#projects > .project > a {
+    font-size: 14px;
+    margin-top: 6px;
+    color: cornflowerblue;
+}
+
 #projects > .project > .briefDesc {
     margin-top: 10px;
     font-size: 20px;
