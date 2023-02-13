@@ -70,6 +70,7 @@
 }
 
 #projects > .project > a {
+    width: fit-content;
     font-size: 14px;
     margin-top: 6px;
     color: cornflowerblue;
