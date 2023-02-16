@@ -1,4 +1,4 @@
-@media screen and (max-width: 600px) {
+﻿@media screen and (max-width: 600px) {
     h1 {
         font-size: 28px;
     }
@@ -32,4 +32,16 @@
         position: initial;
     }
 
+    #projects > .project > .images {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    #projects > .project > .images > img {
+        margin-right: 0;
+        max-height: initial;
+        width: available;
+        width: -moz-available;
+    }
 }
