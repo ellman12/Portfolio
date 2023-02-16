@@ -2,8 +2,11 @@
     user-select: none;
 }
 
+h1, h2 {
+    font-weight: normal;
+}
+
 .title {
-    display: block;
     text-align: center;
 }
 
