@@ -10,25 +10,24 @@ h1, h2 {
     text-align: center;
 }
 
-#sortModeLabel {
-    display: block;
-    text-align: center;
-    margin-bottom: 4px;
-}
-
 #sortControls {
     display: flex;
     flex-direction: row;
     align-items: center;
-    width: 220px;
-    justify-content: space-evenly;
+    width: fit-content;
+    width: -moz-fit-content;
     margin: 0 auto;
+}
+
+#sortControls > span {
+    margin-right: 4px;    
 }
 
 #sortControls > select {
     background-color: black;
     border: 1px solid white;
     border-radius: 4px;
+    margin-left: 4px;
 }
 
 #projects {
