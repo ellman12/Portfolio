@@ -13,13 +13,13 @@
 
 <div id="sortControls">
 	<span>Project Sort By</span>
-	<select @bind="@sortMode" @bind:after="@SortModeUpdated">
+	<select @bind="@sortMode" @onclick="@SortModeUpdated">
 		<option value="Name">Name</option>
 		<option value="StartDate">StartDate</option>
 		<option value="EndDate">EndDate</option>
 	</select>
 
-	<select @bind="@sorting" @bind:after="@SortModeUpdated">
+	<select @bind="@sorting" @onclick="@SortModeUpdated">
 		<option value="Ascending">Ascending</option>
 		<option value="Descending">Descending</option>
 	</select>
