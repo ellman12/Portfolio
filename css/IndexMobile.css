@@ -1,4 +1,4 @@
-﻿@media screen and (max-width: 600px) {
+﻿@media screen and (max-width: 500px) {
     h1 {
         font-size: 28px;
     }
@@ -42,6 +42,7 @@
         margin-right: 0;
         max-height: initial;
         width: available;
-        width: -moz-available;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
     }
 }
