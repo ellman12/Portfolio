@@ -36,15 +36,15 @@
 				<span class="history">@p.startDate &#8211; @(p.endDate == null ? "Present" : p.endDate)</span>
 			</div>
 
-			<div class="images">
-				@if (p.images?.Length > 0)
-				{
-					foreach ((string path, string altText) in p.images)
+			@if (p.images?.Length > 0)
+			{
+				<div class="images">
+					@foreach ((string path, string altText) in p.images)
 					{
 						<img title="@altText" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="@altText"/>
 					}
-				}
-			</div>
+				</div>
+			}
 
 			@if (!String.IsNullOrWhiteSpace(p.repoLink))
 			{

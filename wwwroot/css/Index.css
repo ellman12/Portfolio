@@ -87,8 +87,12 @@ h1, h2 {
 #projects > .project > a {
     width: fit-content;
     font-size: 14px;
-    margin-top: 6px;
+    margin-top: 2px;
     color: cornflowerblue;
+}
+
+#projects > .project > .images + a {
+    margin-top: -10px;
 }
 
 #projects > .project > .briefDesc {
