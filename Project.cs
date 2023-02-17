@@ -101,7 +101,6 @@ public record Project
 				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
 
 				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
-				// images = new[] { "" }, //TODO: get picture(s)
 				startDate = new DateOnly(2019, 10, 8),
 				endDate = null
 			},
@@ -146,7 +145,14 @@ public record Project
 				There are a lot of different arguments you can pass to it to control how it operates. The idea for this project came to me one day during my Software Security class. We were talking about passwords and the professor mentioned something along the lines of guessing and checking a password over and over, and a light bulb went off in my head and I knew I had to try making that. Around that time I also wanted to get experience adding command line arguments (flags) to a project, so I figured I would combine both into one.
 
 				Overall, the project is more for testing and experimentation versus being useful.",
-				// images = new []{""}, //TODO: add images here and to repo readme too
+				images = new []
+				{
+					("PGG/PGG 1.png", "PGG Help Output"),
+					("PGG/PGG 2.png", "Guessing a Password"),
+					("PGG/PGG 3.png", "Guessing a Password with Series Mode"),
+					("PGG/PGG 4.png", "Guessing a Password with Increment Mode")
+				},
+				maxHeight = 400,
 				startDate = new DateOnly(2021, 3, 24),
 				endDate = new DateOnly(2021, 10, 21)
 			},
@@ -156,7 +162,6 @@ public record Project
 				repoLink = "https://github.com/ellman12/TI-84-Plus-CE",
 				briefDesc = "Various scripts to automate my Scripts to automate my TI-84 Plus CE graphing calculator",
 				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
-				//images TODO? Pics of calculator, programs, etc.
 				startDate = new DateOnly(2020, 4, 16),
 				endDate = new DateOnly(2021, 4, 29)
 			}
