@@ -161,7 +161,7 @@ public record Project
 				name = "TI-Basic Scripts",
 				repoLink = "https://github.com/ellman12/TI-84-Plus-CE",
 				briefDesc = "Various scripts to automate my Scripts to automate my TI-84 Plus CE graphing calculator",
-				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
+				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a style='color: cornflowerblue' href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
 				startDate = new DateOnly(2020, 4, 16),
 				endDate = new DateOnly(2021, 4, 29)
 			}
