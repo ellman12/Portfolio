@@ -4,6 +4,8 @@ namespace Portfolio;
 public record Project
 {
 	public string name = null!, repoLink = null!, briefDesc = null!, longDesc = null!;
+
+	public int maxHeight = 357;
 	
 	////Paths relative to wwwroot/Images/ for images for this project. 
 	public (string, string)[]? images;
@@ -38,7 +40,22 @@ public record Project
 
 				PSS was my first web app project ever, and I'm very proud of how far it's come over the years.",
 				
-				images = new[] {("", "")},
+				maxHeight = 285,
+				images = new[]
+				{
+					("PSS/PSS 1.png", "Import Page of PSS"),
+					("PSS/PSS 2.png", "Main View of PSS"),
+					("PSS/PSS 3.png", "Viewing a Video"),
+					("PSS/PSS 4.png", "Viewing a Photo"),
+					("PSS/PSS 5.png", "Viewing your Albums/Folders (Collections)"),
+					("PSS/PSS 6.png", "Viewing the Contents of an Album"),
+					("PSS/PSS 7.png", "Viewing a Single Photo in an Album"),
+					("PSS/PSS 8.png", "Viewing Items Without a Date Taken (DT)"),
+					("PSS/PSS 9.png", "Viewing Items Marked As Starred"),
+					("PSS/PSS 10.png", "Memories Page, Which Allows Viewing Items Taken on a Date and Shows What Year They Were Taken"),
+					("PSS/PSS 11.png", "Trash Page"),
+					("PSS/PSS 12.png", "Settings Page")
+				},
 				startDate = new DateOnly(2020, 10, 16),
 				endDate = null
 			},

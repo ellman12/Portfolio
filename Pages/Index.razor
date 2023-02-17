@@ -41,7 +41,7 @@
 				<div class="images">
 					@foreach ((string path, string altText) in p.images)
 					{
-						<img title="@altText" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="@altText"/>
+						<img style="max-height: @(p.maxHeight)px" title="@altText" onclick="window.open('Images/@path', '_blank').focus();" src="Images/@path" loading="lazy" alt="@altText"/>
 					}
 				</div>
 			}
