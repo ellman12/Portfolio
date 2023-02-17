@@ -48,7 +48,7 @@
 
 			@if (!String.IsNullOrWhiteSpace(p.repoLink))
 			{
-				<a target="_blank" href="@p.repoLink">GitHub Repo</a>
+				<a target="_blank" href="@p.repoLink">View the Repo</a>
 			}
 			<span id="briefDesc @i" class="briefDesc" onclick="document.getElementById('briefDesc @i').style.display = 'none'; document.getElementById('longDesc @i').style.display = 'inline'">@((MarkupString) p.briefDesc)</span>
 			<span id="longDesc @i" class="longDesc" onclick="document.getElementById('longDesc @i').style.display = 'none'; document.getElementById('briefDesc @i').style.display = 'inline'">@((MarkupString) p.longDesc)</span>
