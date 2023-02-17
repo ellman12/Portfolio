@@ -54,10 +54,10 @@ public record Project
 			},
 			new()
 			{
-				name = "Dish Up", //todo: https://bitbucket.org/dpdsu/csc-470-project-repo/src/master/
+				name = "Dish Up", 
 				repoLink = "https://bitbucket.org/dpdsu/csc-470-project-repo/src/master/",
 				briefDesc = "Blazor Server app for creating, storing, viewing, and sharing recipes with other users.",
-				longDesc = @"Dish Up is what myself and three other people produced for our Software Engineering class's final project. It is a recipe manager written in Blazor Server and powered by a PostgreSQL database. One big emphasis this project had was being able to easily share recipes with other users. I pitched the original idea and took the role of the product manager and team leader.
+				longDesc = @"Dish Up is what myself and three other people produced for our Software Engineering class's final project. It is a recipe manager written in Blazor Server and powered by a PostgreSQL database. One big emphasis this project had was being able to easily share recipes with other users. Some other features it has are Markdown support in recipe descriptions and the ability to add a URL to an image for each recipe. I pitched the original idea and took the role of the product manager and team leader.
 
 				I had four observations/thoughts over the years that led me to develop the idea for the project:
 				1) Recipe books can be and usually are enormous,
@@ -66,7 +66,13 @@ public record Project
 				4) If you want to share a recipe with someone, you either have to print it out and hand-deliver it to them, (e-)mail it, etc.
 
 				So I thought to myself, 'having a digital recipe manager with an emphasis on easily sharing items would be a perfect project.' That feature itself was probably inspired by Google Photos' sharing abilities.",
-				// images = new[] { "" }, //TODO: get picture(s)
+				images = new []
+				{
+					("Dish Up/Dish Up 1.png", "User Account Creation"),
+					("Dish Up/Dish Up 2.png", "Viewing a Recipe"),
+					("Dish Up/Dish Up 3.png", "Editing a Recipe, and Showing Off Markdown Support"),
+					("Dish Up/Dish Up 4.png", "Viewing Your Folders and Adding a Recipe to a Folder")
+				},
 				startDate = new DateOnly(2022, 10, 8),
 				endDate = new DateOnly(2022, 12, 16)
 			},
