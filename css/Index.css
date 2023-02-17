@@ -1,12 +1,19 @@
 * {
     user-select: none;
+    -moz-user-select: none;
+    user-focus: none;
+    -moz-user-focus: ignore;
 }
 
-h1, h2 {
+#topText {
+    font-size: 32px;
+    display: block;
+}
+
+#topText, h2 {
     font-weight: normal;
-}
-
-.title {
+    border: none;
+    outline: none;
     text-align: center;
 }
 
