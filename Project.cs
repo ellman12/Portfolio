@@ -106,6 +106,15 @@ public record Project
 			},
 			new()
 			{
+				name = "Arcane Defense",
+				repoLink = "https://github.com/ellman12/Arcane-Defense",
+				briefDesc = "Final project for my GAME 222 class. Defend your house from an endless horde of enemies using your arsenal of magical attacks. Play the game <a style='color: cornflowerblue' target='_blank' href='https://simmer.io/@ellman13/arcane-defense'>here</a>!",
+				longDesc = "Final project for my GAME 222 class. Defend your house from an endless horde of enemies using your arsenal of magical attacks. Play the game <a style='color: cornflowerblue' target='_blank' href='https://simmer.io/@ellman13/arcane-defense'>here</a>!",
+				startDate = new DateOnly(2023, 3, 22),
+				endDate = new DateOnly(2023, 5, 2)
+			},
+			new()
+			{
 				name = "The Blighted Wilds",
 				repoLink = "https://github.com/ellman12/Game-Jam-2023",
 				briefDesc = "A game I and nine other people made for Global Game Jam 2023.",
