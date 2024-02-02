@@ -1,7 +1,7 @@
 namespace Portfolio;
 
 ///Stores information about a project.
-public record Project
+public sealed record Project
 {
 	public string name = null!, repoLink = null!, briefDesc = null!, longDesc = null!;
 
