@@ -21,50 +21,40 @@ public sealed record Project
 		{
 			new()
 			{
-				name = "Photos Storage Server (PSS)",
-				repoLink = "https://github.com/ellman12/Photos-Storage-Server",
-				briefDesc = "A locally hosted photo and video manager written in C# and Blazor Server, designed as a replacement for Google Photos.",
-				longDesc = @"Photos Storage Server is a free and open source replacement for Google Photos, intended to be hosted on the local network, and used by a single person. Under the hood it uses a PostgreSQL database, which stores things like: what items are in your library, the paths to those items, what albums/folders you have and their contents, when items were taken, etc. PSS has been out for a while now, and I'm still updating and improving it to this day. Since starting PSS, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I have also gotten a ton of experience with C#, and I think this project is what caused me to fall in love with C#. I am very proud with how far this project has come; at over 1,200 commits, it's my largest personal project ever.
+				name = "MemoryMosaic (MM)",
+				repoLink = "https://github.com/ellman12/MemoryMosaic",
+				briefDesc = "MemoryMosaic (MM) is a free and open source replacement for Google Photos intended to be used by a single person either on your computer, or on a server on the local network.",
+				longDesc = @"MemoryMosaic is a free and open source replacement for Google Photos, intended to be used by a single person either on your computer, or on a server on the local network. Under the hood it uses a PostgreSQL database, which stores and manages your library.
 
-				PSS has a lot of really nice features that aren't found in Google Photos:
-				• Folders, which act like Google Photos' Archive feature, but you can have as many as you want.
-				• Import page, which allows you to control the filename, date taken, and other data about items before they're added to your library. You can even add items to albums/folders from this page. In Google Photos you don't get this kind of control. It also warns you if you're trying to add items to your library that are already in your library.
-				• Easily create and export backups of your library, allowing you to easily return your library to that point in time.
-				• Items don't require a Date Taken value like in Google Photos. Useful for if you don't know when an item was taken.
+				The idea of MM came into existence around October of 2020, when Google announced they were ending their free and unlimited tier of Photos in July of 2021. Over those next few months and over the summer, I began the initial development of MM. I started learning HTML, CSS, JavaScript, Blazor, and PostgreSQL. The initial development of MM is split up into three phases, which I've used repeatedly in future web projects:
 
-				The idea of PSS came into existence around October of 2020, when Google announced they were ending their free and unlimited tier of Photos in July of 2021. This was problematic as I had been relying on Photos since its initial release. Over those next few months and over the summer, I began the initial development of PSS. I started learning HTML, CSS, JavaScript, Blazor, and PostgreSQL. The initial development of PSS is split up into three phases, which I've used repeatedly in future web projects:
-
-				Phase 1 was learning SQL and determining the structure of the database. In the early days, the database was in MySQL, but I upgraded to PostgreSQL a lot later. Having the database figured out before writing any backend code worked so well that this is now the first step I always take when making a new web app that has a database.
+				Phase 1 was learning SQL and determining the structure of the database. Having the database figured out before writing any backend code worked so well that this is now the first step I always take when making a new web app that has a database.
 				Phase 2 was writing the backend methods in C# which would interface with the database. This made it very easy on the frontend as I could get/set data in the database and it was all abstracted away.
-				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done. I think it works perfectly as it's easy on the eyes and keeps the UI clean and simple, helping the user focus on the important content on the page.
+				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done.
 
-				PSS was my first web app project ever, and I'm very proud of how far it's come over the years.",
-				
+				MM was my first web app project ever, and I'm very proud of how far it's come over the years. Since starting MM, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I am very proud with how far this project has come. At over 2,500 commits, it's my largest personal project ever. In the beginning of February, I published the largest version to date: V3. This significantly overhauled much of MemoryMosaic, and helped to ensure it would scale well, even decades into the future.",
 				maxHeight = 285,
 				images = new[]
 				{
-					("PSS/PSS 1.png", "Import Page of PSS"),
-					("PSS/PSS 2.png", "Main View of PSS"),
-					("PSS/PSS 3.png", "Viewing a Video"),
-					("PSS/PSS 4.png", "Viewing a Photo"),
-					("PSS/PSS 5.png", "Viewing your Albums/Folders (Collections)"),
-					("PSS/PSS 6.png", "Viewing the Contents of an Album"),
-					("PSS/PSS 7.png", "Viewing a Single Photo in an Album"),
-					("PSS/PSS 8.png", "Viewing Items Without a Date Taken (DT)"),
-					("PSS/PSS 9.png", "Viewing Items Marked As Starred"),
-					("PSS/PSS 10.png", "Memories Page, Which Allows Viewing Items Taken on a Date and Shows What Year They Were Taken"),
-					("PSS/PSS 11.png", "Trash Page"),
-					("PSS/PSS 12.png", "Settings Page")
+					("MM/Home.png", "Home Page"),
+					("MM/Import.png", "Import Page"),
+					("MM/VideoPlayer.png", "Viewing a Video"),
+					("MM/Memories.png", "Memories Page"),
+					("MM/Backups.png", "Backups Page"),
+					("MM/Collections.png", "Collections Page"),
+					("MM/Stormy Album.png", "Viewing an Album"),
+					("MM/Search.png", "Search Page"),
+					("MM/Settings.png", "Settings Page"),
 				},
 				startDate = new DateOnly(2020, 10, 16),
-				endDate = null
+				endDate = new DateOnly(2024, 2, 2)
 			},
 			new()
 			{
 				name = "Graphical Photo Organizer (GPO)",
 				repoLink = "https://github.com/ellman12/Graphical-Photo-Organizer",
 				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when they were taken.",
-				longDesc = @"GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
+				longDesc = "GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
 				images = new[] {("GPO/GPO1.png", "Main Graphical Photo Organizer Window"), ("GPO/GPO2.png", "Graphical Photo Organizer Settings Window")},
 				startDate = new DateOnly(2022, 2, 21),
 				endDate = new DateOnly(2022, 6, 14)
