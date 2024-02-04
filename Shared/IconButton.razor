@@ -1,0 +1,13 @@
+﻿<button class="iconBtn" @onclick="@OnClick">
+	<MaterialIcon Icon="@Icon"/>
+</button>
+
+@code {
+
+	[Parameter, EditorRequired]
+	public required string Icon { get; set; }
+
+	[Parameter, EditorRequired]
+	public required Action OnClick { get; set; }
+
+}
