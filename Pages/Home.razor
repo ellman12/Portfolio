@@ -73,6 +73,7 @@
 		<span>Sort Projects By</span>
 		<select @bind="@sortMode" @onclick="@SortModeUpdated">
 			<option value="Name">Name</option>
+			<option value="Significance">Significance</option>
 			<option value="StartDate">StartDate</option>
 			<option value="EndDate">EndDate</option>
 		</select>
@@ -103,20 +104,22 @@
 			projects = sortMode switch
 			{
 				SortMode.Name => projects.OrderByDescending(p => p.name).ToList(),
+				SortMode.Significance => projects.OrderByDescending(p => p.significance).ToList(),
 				SortMode.StartDate => projects.OrderByDescending(p => p.startDate).ToList(),
 				SortMode.EndDate => projects.OrderByDescending(p => p.endDate).ToList(),
 				_ => throw new ArgumentOutOfRangeException()
-				};
+			};
 		}
 		else if (sorting == "Ascending")
 		{
 			projects = sortMode switch
 			{
 				SortMode.Name => projects.OrderBy(p => p.name).ToList(),
+				SortMode.Significance => projects.OrderBy(p => p.significance).ToList(),
 				SortMode.StartDate => projects.OrderBy(p => p.startDate).ToList(),
 				SortMode.EndDate => projects.OrderBy(p => p.endDate).ToList(),
 				_ => throw new ArgumentOutOfRangeException()
-				};
+			};
 		}
 
 		StateHasChanged();

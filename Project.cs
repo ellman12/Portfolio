@@ -5,7 +5,7 @@ public sealed record Project
 {
 	public string name = null!, repoLink = null!, briefDesc = null!, longDesc = null!;
 
-	public int maxHeight = 357;
+	public int significance;
 
 	////Paths relative to wwwroot/Images/ for images for this project. 
 	public (string, string)[]? images;
@@ -33,7 +33,7 @@ public sealed record Project
 				Phase 3 was developing the frontend. I strongly dislike light themes, so I went with a black and white style, which I loved so much I've used it in every other web project I've done.
 
 				MM was my first web app project ever, and I'm very proud of how far it's come over the years. Since starting MM, I have learned HTML, CSS, JavaScript, Blazor, and PostgreSQL. I am very proud with how far this project has come. At over 2,500 commits, it's my largest personal project ever. In the beginning of February, I published the largest version to date: V3. This significantly overhauled much of MemoryMosaic, and helped to ensure it would scale well, even decades into the future.",
-				maxHeight = 285,
+				significance = 100,
 				images = new[]
 				{
 					("MM/Home.png", "Home Page"),
@@ -55,6 +55,7 @@ public sealed record Project
 				repoLink = "https://github.com/ellman12/Graphical-Photo-Organizer",
 				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when they were taken.",
 				longDesc = "GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
+				significance = 90,
 				images = new[] {("GPO/GPO1.png", "Main Graphical Photo Organizer Window"), ("GPO/GPO2.png", "Graphical Photo Organizer Settings Window")},
 				startDate = new DateOnly(2022, 2, 21),
 				endDate = new DateOnly(2022, 6, 14)
@@ -73,6 +74,7 @@ public sealed record Project
 				4) If you want to share a recipe with someone, you either have to print it out and hand-deliver it to them, (e-)mail it, etc.
 
 				So I thought to myself, 'having a digital recipe manager with an emphasis on easily sharing items would be a perfect project.' That feature itself was probably inspired by Google Photos' sharing abilities.",
+				significance = 80,
 				images = new []
 				{
 					("Dish Up/Dish Up 1.png", "User Account Creation"),
@@ -91,6 +93,7 @@ public sealed record Project
 				longDesc = @"In high school, I discovered the amazing tool that is AutoHotkey. Since then, I have created an insane amount of scripts for automating many aspects of Windows as well as programs like Firefox, JetBrains Rider, MS Word, etc. The structure of it is one main script that links together many other scripts, along with some other misc. scripts I use once in a blue moon. It has evolved a ton over the years. In its current form, it consists of my keyboard and mouse—with 18 and 14 extra buttons, respectively—and the newest addition, my Stream Deck XL. The Stream Deck is super nice as it not only has 32 buttons and those actions are different depending on the active program, but the buttons have screens so you know what each one does without having to memorize them. It's so nice in fact, that as soon as I got it, it immediately replaced the 18 buttons on my keyboard. Two other major things I've done is on my keyboard, I reprogrammed most of my F1–F12 keys and my NumPad keys to serve more useful purposes. The former switches between different types of windows, switches between tabs, etc. The NumPad controls music, YouTube videos, and even does a lot of common shortcuts in Rider like selecting text, moving between words, deleting lines, etc. One other thing I made is a GUI that lets me edit the Clipboard contents whenever I want.
 
 				These scripts—especially the extra mouse buttons—have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have helped me to become so much more efficient even when doing basic things like web browsing. My scripts are constantly evolving and changing as I think of new ideas for things to automate. I think this project is the reason my muscle memory is extremely good and my brain is always trying to optimize literally everything.",
+				significance = 70,
 				startDate = new DateOnly(2019, 10, 8),
 				endDate = null
 			},
@@ -100,6 +103,7 @@ public sealed record Project
 				repoLink = "https://github.com/ellman12/Arcane-Defense",
 				briefDesc = "Final project for my GAME 222 class. Defend your house from an endless horde of enemies using your arsenal of magical attacks. Play the game <a style='color: cornflowerblue' target='_blank' href='https://simmer.io/@ellman13/arcane-defense'>here</a>!",
 				longDesc = "Final project for my GAME 222 class. Defend your house from an endless horde of enemies using your arsenal of magical attacks. Play the game <a style='color: cornflowerblue' target='_blank' href='https://simmer.io/@ellman13/arcane-defense'>here</a>!",
+				significance = 60,
 				startDate = new DateOnly(2023, 3, 22),
 				endDate = new DateOnly(2023, 5, 2)
 			},
@@ -110,6 +114,7 @@ public sealed record Project
 				briefDesc = "A game I and nine other people made for Global Game Jam 2023. Play the game <a style='color: cornflowerblue' target='_blank' href='https://i.simmer.io/@GameJam/the-blighted-wilds'>here</a>!",
 				longDesc = @"Play the game <a style='color: cornflowerblue' target='_blank' href='https://i.simmer.io/@GameJam/the-blighted-wilds'>here</a>!
 							The theme for 2023 was 'Roots.' Our game is a 2D side-scrolling platformer where the player dives down into the roots of a giant tree and must purify the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
+				significance = 50,
 				startDate = new DateOnly(2023, 2, 3),
 				endDate = new DateOnly(2023, 2, 5)
 			},
@@ -118,8 +123,9 @@ public sealed record Project
 				name = "DateTakenExtractor (DTE)",
 				repoLink = "https://github.com/ellman12/DateTakenExtractor",
 				briefDesc = "Small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos.",
-				longDesc = @"DateTakenExtractor is a small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,800 downloads which I'm very proud about.",
+				longDesc = "DateTakenExtractor is a small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,800 downloads which I'm very proud about.",
 				images = new []{("DTE/DTE1.png", "Example of using Date Taken Extractor")},
+				significance = 40,
 				startDate = new DateOnly(2022, 5, 4),
 				endDate = new DateOnly(2023, 1, 5)
 			},
@@ -128,8 +134,9 @@ public sealed record Project
 				name = "Graphical Backup Program (GBP)",
 				repoLink = "https://github.com/ellman12/Graphical-Backup-Program",
 				briefDesc = "A C# WinForms utility for backing up groups of files and folders on a Windows PC.",
-				longDesc = @"Graphical Backup Program is a WinForms utility for backing up groups of folders and files, designed primarily to make it easy to backup items to an online service like Google Drive or OneDrive, and to make it easy to create groups of related items and give control of which of those groups are backed up. It can also compress backups to a .zip file, and open a web URL upon completion of a backup. GBP was my first experience creating a GUI project, and I'm very happy with how it turned out as I think the interface is simple enough for anyone to use and understand, while also giving the user a lot of customization and power.",
+				longDesc = "Graphical Backup Program is a WinForms utility for backing up groups of folders and files, designed primarily to make it easy to backup items to an online service like Google Drive or OneDrive, and to make it easy to create groups of related items and give control of which of those groups are backed up. It can also compress backups to a .zip file, and open a web URL upon completion of a backup. GBP was my first experience creating a GUI project, and I'm very happy with how it turned out as I think the interface is simple enough for anyone to use and understand, while also giving the user a lot of customization and power.",
 				images = new []{("GBP/GBP_GUI.png", "Main Graphical Backup Program Window")},
+				significance = 30,
 				startDate = new DateOnly(2021, 7, 24),
 				endDate = new DateOnly(2022, 2, 21)
 				
@@ -151,7 +158,7 @@ public sealed record Project
 					("PGG/PGG 3.png", "Guessing a Password with Series Mode"),
 					("PGG/PGG 4.png", "Guessing a Password with Increment Mode")
 				},
-				maxHeight = 400,
+				significance = 20,
 				startDate = new DateOnly(2021, 3, 24),
 				endDate = new DateOnly(2021, 10, 21)
 			},
@@ -161,6 +168,7 @@ public sealed record Project
 				repoLink = "https://github.com/ellman12/TI-84-Plus-CE",
 				briefDesc = "Various scripts to automate my Scripts to automate my TI-84 Plus CE graphing calculator",
 				longDesc = "One of my oldest repos on GitHub, dedicated to storing all the little scripts I've written in <a style='color: cornflowerblue' href='https://www.wikiwand.com/en/TI-BASIC'>TI-Basic</a> for my graphing calculator. Most of the files there are no longer used, but are kept around for historical reasons, and in case someone else might find them useful.",
+				significance = 10,
 				startDate = new DateOnly(2020, 4, 16),
 				endDate = new DateOnly(2021, 4, 29)
 			}

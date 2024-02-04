@@ -4,6 +4,7 @@
 public enum SortMode
 {
 	Name,
+	Significance,
 	StartDate,
-	EndDate,
+	EndDate
 }
