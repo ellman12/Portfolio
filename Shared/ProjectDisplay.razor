@@ -1,0 +1,54 @@
+﻿<link href="css/Shared/ProjectDisplay.css" rel="stylesheet"/>
+
+<div @key="@Project">
+	<div>
+		<h3 id="name">@Project.name</h3>
+		<p>@Project.startDate &ndash; @(Project.endDate == null ? "Present" : Project.endDate)</p>
+	</div>
+
+	@if (Project.images != null)
+	{
+		<div class="images">
+			@if (Project.images.Length > 1) { <IconButton Icon="arrow_back_ios" OnClick="@(() => Index--)"/> }
+			
+			<img src="Images/@CurrentImage.Item1" alt="@CurrentImage.Item2" title="@CurrentImage.Item2" loading="lazy"/>
+
+			@if (Project.images.Length > 1) { <IconButton Icon="arrow_forward_ios" OnClick="@(() => Index++)"/> }
+		</div>
+	}
+
+	@if (showingBriefDesc)
+	{
+		<p @onclick="@(() => showingBriefDesc = false)">@((MarkupString) Project.briefDesc)</p>
+	}
+	else
+	{
+		<p @onclick="@(() => showingBriefDesc = true)">@((MarkupString) Project.longDesc)</p>
+	}
+</div>
+
+@code {
+
+	[Parameter, EditorRequired] public required Project Project { get; set; }
+
+	private bool showingBriefDesc = true;
+
+	private int index = 0;
+	private int Index
+	{
+		get => index;
+		set
+		{
+			if (value >= Project.images!.Length)
+				index = 0;
+			else if (value < 0)
+				index = Project.images.Length -1;
+			else
+				index = value;
+			
+			StateHasChanged();
+		}
+	}
+
+	private (string, string) CurrentImage => Project.images![Index];
+}

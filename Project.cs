@@ -6,7 +6,7 @@ public sealed record Project
 	public string name = null!, repoLink = null!, briefDesc = null!, longDesc = null!;
 
 	public int maxHeight = 357;
-	
+
 	////Paths relative to wwwroot/Images/ for images for this project. 
 	public (string, string)[]? images;
 
@@ -61,7 +61,7 @@ public sealed record Project
 			},
 			new()
 			{
-				name = "Dish Up", 
+				name = "Dish Up",
 				repoLink = "https://bitbucket.org/dpdsu/csc-470-project-repo/src/master/",
 				briefDesc = "Blazor Server app for creating, storing, viewing, and sharing recipes with other users.",
 				longDesc = @"Dish Up is what myself and three other people produced for our Software Engineering class's final project. It is a recipe manager written in Blazor Server and powered by a PostgreSQL database. One big emphasis this project had was being able to easily share recipes with other users. Some other features it has are Markdown support in recipe descriptions and the ability to add a URL to an image for each recipe. I pitched the original idea and took the role of the product manager and team leader.

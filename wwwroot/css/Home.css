@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
     border-bottom: 1px solid white;
 
     > div:first-of-type {
@@ -108,28 +108,5 @@
         display: flex;
         flex-direction: column;
         gap: 1.5em;
-
-        > div {
-            width: 100%;
-            border: 1px solid white;
-            border-radius: 4px;
-            padding: 8px;
-
-            > .header {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-
-                > h3 {
-                    font-size: 1.4em;
-                }
-            }
-            
-            > p {
-                font-size: 1em;
-                margin-top: 1em;
-            }
-        }
     }
 }

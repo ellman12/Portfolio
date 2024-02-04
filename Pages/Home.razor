@@ -37,7 +37,7 @@
 
 		<div>
 			<MaterialIcon Icon="work"/>
-			<span>KBR - Software Engineer</span>
+			<span>KBR — Software Engineer</span>
 		</div>
 	</div>
 
@@ -67,7 +67,7 @@
 		<h2>Projects</h2>
 	</div>
 
-	<p>I've developed many projects over the years that I'm quite proud of.</p>
+	<p>I've developed many projects over the years that I'm very proud of. By default, these are sorted by significance.</p>
 
 	<div id="sortControls">
 		<span>Sort Projects By</span>
@@ -84,17 +84,9 @@
 	</div>
 
 	<div id="projects-list">
-		@for (int i = 0; i < projects.Count; i++)
+		@foreach (var project in projects)
 		{
-			var p = projects[i];
-			<div @key="@p">
-				<div class="header">
-					<h3 id="name @i">@p.name</h3>
-					<p>@p.startDate &ndash; @(p.endDate == null ? "Present" : p.endDate)</p>
-				</div>
-
-				<p>@((MarkupString) p.briefDesc)</p>
-			</div>
+			<ProjectDisplay Project="@project"/>
 		}
 	</div>
 </div>
