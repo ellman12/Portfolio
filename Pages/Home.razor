@@ -69,7 +69,7 @@
 		<h2>Projects</h2>
 	</div>
 
-	<p>I've developed many projects over the years that I'm very proud of. By default, these are sorted by significance.</p>
+	<p>I've developed many projects over the years that I'm very proud of.</p>
 
 	<div id="sortControls">
 		<span>Sort Projects By</span>
@@ -96,7 +96,7 @@
 
 @code {
 	private List<Project> projects = Project.GetProjects();
-	private SortMode sortMode;
+	private SortMode sortMode = SortMode.Significance;
 	private string sorting = "Descending";
 
 	private void SortModeUpdated()
