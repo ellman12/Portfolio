@@ -38,6 +38,7 @@ public sealed record Project
 				{
 					("MM/Home.png", "Home Page"),
 					("MM/Import.png", "Import Page"),
+					("MM/FullscreenViewer.png", "Viewing a Photo"),
 					("MM/VideoPlayer.png", "Viewing a Video"),
 					("MM/Memories.png", "Memories Page"),
 					("MM/Backups.png", "Backups Page"),
