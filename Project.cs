@@ -107,7 +107,7 @@ public sealed record Project
 			{
 				name = "The Blighted Wilds",
 				repoLink = "https://github.com/ellman12/Game-Jam-2023",
-				briefDesc = "A game I and nine other people made for Global Game Jam 2023.",
+				briefDesc = "A game I and nine other people made for Global Game Jam 2023. Play the game <a style='color: cornflowerblue' target='_blank' href='https://i.simmer.io/@GameJam/the-blighted-wilds'>here</a>!",
 				longDesc = @"Play the game <a style='color: cornflowerblue' target='_blank' href='https://i.simmer.io/@GameJam/the-blighted-wilds'>here</a>!
 							The theme for 2023 was 'Roots.' Our game is a 2D side-scrolling platformer where the player dives down into the roots of a giant tree and must purify the three shrines inside its roots while defeating the enemies inside during the process. On my team, we had 3 programmers, 2 level designers, 2 sound designers and composers, and 3 artists. Overall, Game Jam was a very enjoyable and rewarding experience that I plan to do again in the future.",
 				startDate = new DateOnly(2023, 2, 3),

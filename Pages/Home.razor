@@ -54,22 +54,79 @@
 		<span>KBR &mdash; Software/Web Developer</span>
 		<span>June 2023 &ndash; Present</span>
 	</div>
-	
+
 	<div>
 		<span>Daktronics &mdash; Software Design Student</span>
 		<span>May 2022 &ndash; May 2023</span>
 	</div>
 </div>
 
-<div class="section">
+<div class="section" id="projects">
 	<div>
 		<MaterialIcon Icon="code" Size="2em"/>
 		<h2>Projects</h2>
 	</div>
 
-	<p>I've developed several projects over the years that I'm quite proud of.</p>
+	<p>I've developed many projects over the years that I'm quite proud of.</p>
 
-	<div>
-		
+	<div id="sortControls">
+		<span>Sort Projects By</span>
+		<select @bind="@sortMode" @onclick="@SortModeUpdated">
+			<option value="Name">Name</option>
+			<option value="StartDate">StartDate</option>
+			<option value="EndDate">EndDate</option>
+		</select>
+
+		<select @bind="@sorting" @onclick="@SortModeUpdated">
+			<option value="Ascending">Ascending</option>
+			<option value="Descending">Descending</option>
+		</select>
+	</div>
+
+	<div id="projects-list">
+		@for (int i = 0; i < projects.Count; i++)
+		{
+			var p = projects[i];
+			<div @key="@p">
+				<div class="header">
+					<h3 id="name @i">@p.name</h3>
+					<p>@p.startDate &ndash; @(p.endDate == null ? "Present" : p.endDate)</p>
+				</div>
+
+				<p>@((MarkupString) p.briefDesc)</p>
+			</div>
+		}
 	</div>
 </div>
+
+@code {
+	private List<Project> projects = Project.GetProjects();
+	private SortMode sortMode;
+	private string sorting = "Descending";
+
+	private void SortModeUpdated()
+	{
+		if (sorting == "Descending")
+		{
+			projects = sortMode switch
+			{
+				SortMode.Name => projects.OrderByDescending(p => p.name).ToList(),
+				SortMode.StartDate => projects.OrderByDescending(p => p.startDate).ToList(),
+				SortMode.EndDate => projects.OrderByDescending(p => p.endDate).ToList(),
+				_ => throw new ArgumentOutOfRangeException()
+				};
+		}
+		else if (sorting == "Ascending")
+		{
+			projects = sortMode switch
+			{
+				SortMode.Name => projects.OrderBy(p => p.name).ToList(),
+				SortMode.StartDate => projects.OrderBy(p => p.startDate).ToList(),
+				SortMode.EndDate => projects.OrderBy(p => p.endDate).ToList(),
+				_ => throw new ArgumentOutOfRangeException()
+				};
+		}
+
+		StateHasChanged();
+	}
+}

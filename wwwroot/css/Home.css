@@ -19,9 +19,13 @@
     & span {
         font-size: 1.4em;
     }
-    
+
     > p {
         font-size: 1.2em;
+    }
+
+    & p {
+        font-size: 1em;
         text-align: justify;
     }
 }
@@ -85,5 +89,47 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+    }
+}
+
+#projects {
+    & span {
+        font-size: 1.2em;
+    }
+
+    > #sortControls {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+    }
+
+    #projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+
+        > div {
+            width: 100%;
+            border: 1px solid white;
+            border-radius: 4px;
+            padding: 8px;
+
+            > .header {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                > h3 {
+                    font-size: 1.4em;
+                }
+            }
+            
+            > p {
+                font-size: 1em;
+                margin-top: 1em;
+            }
+        }
     }
 }
