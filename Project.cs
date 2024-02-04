@@ -77,10 +77,10 @@ public sealed record Project
 				significance = 80,
 				images = new []
 				{
-					("Dish Up/Dish Up 1.png", "User Account Creation"),
 					("Dish Up/Dish Up 2.png", "Viewing a Recipe"),
 					("Dish Up/Dish Up 3.png", "Editing a Recipe, and Showing Off Markdown Support"),
-					("Dish Up/Dish Up 4.png", "Viewing Your Folders and Adding a Recipe to a Folder")
+					("Dish Up/Dish Up 4.png", "Viewing Your Folders and Adding a Recipe to a Folder"),
+					("Dish Up/Dish Up 1.png", "User Account Creation")
 				},
 				startDate = new DateOnly(2022, 10, 8),
 				endDate = new DateOnly(2022, 12, 16)
