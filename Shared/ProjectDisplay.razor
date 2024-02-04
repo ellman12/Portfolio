@@ -1,6 +1,4 @@
-﻿<link href="css/Shared/ProjectDisplay.css" rel="stylesheet"/>
-
-<div @key="@Project">
+﻿<div @key="@Project">
 	<div>
 		<h3 id="name">@Project.name</h3>
 		<p>@Project.startDate &ndash; @(Project.endDate == null ? "Present" : Project.endDate)</p>
