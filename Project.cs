@@ -123,7 +123,7 @@ public sealed record Project
 				name = "DateTakenExtractor (DTE)",
 				repoLink = "https://github.com/ellman12/DateTakenExtractor",
 				briefDesc = "Small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos.",
-				longDesc = "DateTakenExtractor is a small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE came into existence because two projects of mine—Photos Storage Server and Graphical Photo Organizer—both used the same classes/packages for finding and updating the Date Taken metadata, and trying to keep those two files the same was annoying and difficult. I also wanted to redo the class used in those two projects to be smaller, simpler, and better. DTE is my first NuGet package, and currently has over 1,800 downloads which I'm very proud about.",
+				longDesc = "DateTakenExtractor is a small, fast, simple NuGet library for reading and writing Date Taken metadata for photos and videos, with the library consisting of only a single static C# class. DTE is part of what powers MemoryMosaic and Graphical Photo Organizer. Having these read/write operations abstracted away is very helpful for those projects. DTE is my first NuGet package, and currently has over 1,800 downloads which I'm very proud about.",
 				images = new []{("DTE/DTE1.png", "Example of using Date Taken Extractor")},
 				significance = 40,
 				startDate = new DateOnly(2022, 5, 4),
