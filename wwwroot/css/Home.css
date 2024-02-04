@@ -28,6 +28,7 @@
 
 #header {
     align-items: center;
+    text-align: center;
     gap: 32px;
     height: 85vh;
     padding-top: 15vh;
