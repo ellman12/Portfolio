@@ -20,10 +20,6 @@
         font-size: 1.4em;
     }
 
-    > p {
-        font-size: 1.2em;
-    }
-
     & p {
         font-size: 1em;
         text-align: justify;
