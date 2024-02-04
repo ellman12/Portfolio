@@ -29,28 +29,28 @@
 #header {
     align-items: center;
     gap: 32px;
-    height: 80vh;
-    padding-top: 20vh;
+    height: 85vh;
+    padding-top: 15vh;
 
     > h1 {
-        font-size: 64px;
+        font-size: 6em;
     }
 
     > p {
-        font-size: 24px;
+        font-size: 2em;
     }
 
     > img {
         border-radius: 50%;
-        max-width: 300px;
+        max-width: 20vw;
     }
 
     > div {
         display: flex;
         justify-content: center;
         cursor: pointer;
-        margin-top: 50px;
-        height: 8em;
+        margin-top: 1vw;
+        height: 4em;
         width: 100%;
     }
 }
