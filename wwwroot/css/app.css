@@ -1,4 +1,4 @@
-﻿/* Product Sans is the font throughout the project, and .material-icons is used for every icon I get from Google's fonts/icons website. */
+/* Product Sans is the font throughout the project, and .material-icons is used for every icon I get from Google's fonts/icons website. */
 
 /*This is probably illegal. Source: https://codepen.io/bennettfeely/pen/meymwg*/
 @font-face {
@@ -11,12 +11,16 @@
 * {
     --hover-color: rgba(211, 211, 211, 0.1);
     font-family: Product Sans, sans-serif;
+    color-scheme: dark;
     color: white;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    user-select: none;
+    user-focus: none;
 }
 
-body {
-    background-color: black;
-}
+body { background-color: black; }
 
 .iconBtn { /* Button with just an icon and no text */
     color: white;
@@ -42,11 +46,24 @@ body {
 }
 
 /* Add space to right of textBtn icon (which is either an svg like the trash icon or a span) */
-button * ~ * {padding-left: 11px; text-decoration: none;}
+button * ~ * {
+    padding-left: 11px;
+    text-decoration: none;
+}
 
-svg {fill: white;}
+svg { fill: white; }
 
 .iconBtn:hover, .textBtn:hover {
     background-color: var(--hover-color);
     cursor: pointer;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    min-height: 100vh;
+    margin: auto 100px;
+    background-color: #001f1f;
 }
