@@ -38,7 +38,7 @@
             font-size: 1.1em;
         }
     }
-    
+
     #work-experience > div:not(:first-of-type) > span {
         font-size: 1em;
     }
@@ -60,7 +60,7 @@
             font-size: 1em;
         }
     }
-    
+
     #header {
         > h1 {
             font-size: 2.5em;
@@ -79,12 +79,12 @@
             font-size: 1em;
         }
     }
-    
+
     #work-experience > div:not(:first-of-type) {
         flex-direction: column;
         align-items: flex-start;
     }
-    
+
     #projects > #sortControls {
         flex-direction: column;
     }
