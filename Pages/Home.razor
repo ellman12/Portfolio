@@ -73,17 +73,20 @@
 
 	<div id="sortControls">
 		<span>Sort Projects By</span>
-		<select @bind="@sortMode" @onclick="@SortModeUpdated">
-			<option value="Name">Name</option>
-			<option value="Significance">Significance</option>
-			<option value="StartDate">StartDate</option>
-			<option value="EndDate">EndDate</option>
-		</select>
 
-		<select @bind="@sorting" @onclick="@SortModeUpdated">
-			<option value="Ascending">Ascending</option>
-			<option value="Descending">Descending</option>
-		</select>
+		<div>
+			<select @bind="@sortMode" @onclick="@SortModeUpdated">
+				<option value="Name">Name</option>
+				<option value="Significance">Significance</option>
+				<option value="StartDate">StartDate</option>
+				<option value="EndDate">EndDate</option>
+			</select>
+
+			<select @bind="@sorting" @onclick="@SortModeUpdated">
+				<option value="Ascending">Ascending</option>
+				<option value="Descending">Descending</option>
+			</select>
+		</div>
 	</div>
 
 	<div id="projects-list">

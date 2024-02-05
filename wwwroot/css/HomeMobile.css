@@ -84,4 +84,8 @@
         flex-direction: column;
         align-items: flex-start;
     }
+    
+    #projects > #sortControls {
+        flex-direction: column;
+    }
 }
