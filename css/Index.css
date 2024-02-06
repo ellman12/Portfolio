@@ -1,0 +1,132 @@
+* {
+    user-select: none;
+    -moz-user-select: none;
+    user-focus: none;
+    -moz-user-focus: ignore;
+}
+
+#topText {
+    font-size: 32px;
+    display: block;
+}
+
+#topText, h2 {
+    font-weight: normal;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
+#bio {
+    line-height: 1.4;
+}
+
+#sortControls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+}
+
+#sortControls > span {
+    margin-right: 2px;    
+}
+
+#sortControls > select {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+#projects {
+    width: available;
+    width: -moz-available;
+    margin: 50px 40px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > .project {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > .project > .header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#projects > .project > .header > .name {
+    font-size: 35px;
+}
+
+#projects > .project > .header > .history {
+    position: absolute;
+    right: 10px;
+}
+
+#projects > .project > .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+#projects > .project > .images > img {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#projects > .project > .images > img:last-child {
+    margin-right: 0;
+}
+
+#projects > .project > a {
+    width: fit-content;
+    font-size: 14px;
+    margin-top: 2px;
+    color: cornflowerblue;
+}
+
+#projects > .project > .images + a {
+    margin-top: -10px;
+}
+
+#projects > .project > .briefDesc {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+#projects > .project > .longDesc {
+    display: none;
+    white-space: pre-line; /* https://stackoverflow.com/questions/39325414/line-break-in-html-with-n */
+    line-height: 2;
+    font-size: 17px;
+    text-align: justify;
+}
+
+#contactInfo {
+    width: 300px;
+    margin: 50px auto 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contactInfo > * {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+#contactInfo > a {
+    color: cornflowerblue;
+}
