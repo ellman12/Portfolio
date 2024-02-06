@@ -1,0 +1,48 @@
+﻿@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 17px;
+        font-weight: normal;
+        margin: 0 0 10px;
+    }
+
+    #projects {
+        margin: 30px 0 0;
+    }
+
+    #projects > .project {
+        margin-bottom: 30px;
+    }
+
+    #projects > .project > .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #projects > .project > .header > .name {
+        font-size: 22px;
+    }
+    
+    #projects > .project > .header > .history {
+        font-size: 14px;
+        margin-top: 4px;
+        position: initial;
+    }
+
+    #projects > .project > .images {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    #projects > .project > .images > img {
+        margin-right: 0;
+        max-height: initial;
+        width: available;
+        width: -moz-available;          /* WebKit-based browsers will ignore this. */
+        width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+    }
+}
