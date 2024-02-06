@@ -1,119 +1,132 @@
-.section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100px;
-    border-bottom: 1px solid white;
-
-    > div:first-of-type {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-
-        > h2 {
-            font-size: 2em;
-        }
-    }
-
-    & span {
-        font-size: 1.4em;
-    }
-
-    & p {
-        font-size: 1em;
-        text-align: justify;
-    }
-
-    &:not(#header) {
-        padding: 16px;
-        gap: 16px;
-        box-sizing: border-box;
-    }
+* {
+    user-select: none;
+    -moz-user-select: none;
+    user-focus: none;
+    -moz-user-focus: ignore;
 }
 
-#header {
-    align-items: center;
+#topText {
+    font-size: 32px;
+    display: block;
+}
+
+#topText, h2 {
+    font-weight: normal;
+    border: none;
+    outline: none;
     text-align: center;
-    gap: 32px;
-    height: 85vh;
-    padding-top: 15vh;
-
-    > h1 {
-        font-size: 6em;
-    }
-
-    > p {
-        font-size: 2em;
-    }
-
-    > img {
-        border-radius: 50%;
-        max-width: 20vw;
-    }
-
-    > div {
-        display: flex;
-        justify-content: center;
-        cursor: pointer;
-        margin-top: 1vw;
-        height: 4em;
-        width: 100%;
-    }
 }
 
-#about-me {
-    > div:nth-of-type(2) {
-        display: grid;
-        width: 100%;
-        box-sizing: border-box;
-        grid-template-columns: repeat(2, 400px);
-        gap: 16px;
-
-        > div {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 12px;
-        }
-    }
+#bio {
+    line-height: 1.4;
 }
 
-#work-experience {
-    > div:not(:first-child) {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
+#sortControls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: fit-content;
+    width: -moz-fit-content;
+    margin: 0 auto;
+}
+
+#sortControls > span {
+    margin-right: 2px;    
+}
+
+#sortControls > select {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-left: 4px;
 }
 
 #projects {
-    border: none;
-    
-    & span { font-size: 1.2em; }
-
-    > #sortControls {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 4px;
-    }
-
-    #projects-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5em;
-    }
+    width: available;
+    width: -moz-available;
+    margin: 50px 40px 0;
+    display: flex;
+    flex-direction: column;
 }
 
-#contact-info {
+#projects > .project {
+    border: 2px solid white;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+#projects > .project > .header {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#projects > .project > .header > .name {
+    font-size: 35px;
+}
+
+#projects > .project > .header > .history {
+    position: absolute;
+    right: 10px;
+}
+
+#projects > .project > .images {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+#projects > .project > .images > img {
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+#projects > .project > .images > img:last-child {
+    margin-right: 0;
+}
+
+#projects > .project > a {
+    width: fit-content;
+    font-size: 14px;
+    margin-top: 2px;
+    color: cornflowerblue;
+}
+
+#projects > .project > .images + a {
+    margin-top: -10px;
+}
+
+#projects > .project > .briefDesc {
+    margin-top: 8px;
+    font-size: 20px;
+}
+
+#projects > .project > .longDesc {
+    display: none;
+    white-space: pre-line; /* https://stackoverflow.com/questions/39325414/line-break-in-html-with-n */
+    line-height: 2;
+    font-size: 17px;
+    text-align: justify;
+}
+
+#contactInfo {
+    width: 300px;
+    margin: 50px auto 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    
-    > a { color: cornflowerblue; }
+}
+
+#contactInfo > * {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+#contactInfo > a {
+    color: cornflowerblue;
 }

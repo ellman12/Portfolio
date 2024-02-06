@@ -1,0 +1,31 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 200px;
+    border-bottom: 1px solid white;
+}
+
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    height: 80vh;
+    padding-top: 20vh;
+    background-color: darkred;
+}
+
+#header > h1 {
+    font-size: 64px;
+}
+
+#header > p {
+    font-size: 24px;
+}
+
+#header > img {
+    border-radius: 50%;
+    max-width: 300px;
+}
+
