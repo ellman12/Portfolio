@@ -2,30 +2,118 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 200px;
+    min-height: 100px;
     border-bottom: 1px solid white;
+
+    > div:first-of-type {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        > h2 {
+            font-size: 2em;
+        }
+    }
+
+    & span {
+        font-size: 1.4em;
+    }
+
+    & p {
+        font-size: 1em;
+        text-align: justify;
+    }
+
+    &:not(#header) {
+        padding: 16px;
+        gap: 16px;
+        box-sizing: border-box;
+    }
 }
 
 #header {
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+    height: 85vh;
+    padding-top: 15vh;
+
+    > h1 {
+        font-size: 6em;
+    }
+
+    > p {
+        font-size: 2em;
+    }
+
+    > img {
+        border-radius: 50%;
+        max-width: 20vw;
+    }
+
+    > div {
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        margin-top: 1vw;
+        height: 4em;
+        width: 100%;
+    }
+}
+
+#about-me {
+    > div:nth-of-type(2) {
+        display: grid;
+        width: 100%;
+        box-sizing: border-box;
+        grid-template-columns: repeat(2, 400px);
+        gap: 16px;
+
+        > div {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 12px;
+        }
+    }
+}
+
+#work-experience {
+    > div:not(:first-child) {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+#projects {
+    border: none;
+    
+    & span { font-size: 1.2em; }
+
+    > #sortControls {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4px;
+    }
+
+    #projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}
+
+#contact-info {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 32px;
-    height: 80vh;
-    padding-top: 20vh;
-    background-color: darkred;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    
+    > a { color: cornflowerblue; }
 }
-
-#header > h1 {
-    font-size: 64px;
-}
-
-#header > p {
-    font-size: 24px;
-}
-
-#header > img {
-    border-radius: 50%;
-    max-width: 300px;
-}
-

@@ -51,6 +51,13 @@ button * ~ * {
     text-decoration: none;
 }
 
+select {
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
 svg { fill: white; }
 
 .iconBtn:hover, .textBtn:hover {
@@ -62,8 +69,24 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     min-height: 100vh;
-    margin: auto 100px;
-    background-color: #001f1f;
+    margin: auto 10em;
+}
+
+@media screen and (max-width: 1600px) {
+    main {
+        margin: auto 4em;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    main {
+        margin: auto 2em;
+    }
+}
+@media screen and (max-width: 700px) {
+    main {
+        margin: auto 1em;
+    }
 }
