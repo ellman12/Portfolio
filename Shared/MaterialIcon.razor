@@ -1,0 +1,7 @@
+<span class="material-icons" style="font-size: @Size">@Icon</span>
+
+@code {
+	[Parameter, EditorRequired] public required string Icon { get; set; }
+
+	[Parameter] public string Size { get; set; } = "";
+}

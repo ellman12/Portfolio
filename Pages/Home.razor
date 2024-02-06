@@ -1,0 +1,139 @@
+@page "/"
+
+<link href="css/Home.css" rel="stylesheet"/>
+<link href="css/HomeMobile.css" rel="stylesheet"/>
+
+<link href="css/Shared/ProjectDisplay.css" rel="stylesheet"/>
+
+<div class="section" id="header">
+	<h1>Elliott DuCharme</h1>
+	<p>Software Engineer, Web Developer</p>
+	<img src="https://avatars.githubusercontent.com/u/56001219?v=4" alt="Profile Picture"/>
+
+	<div onclick="scrollToAboutMe()">
+		<MaterialIcon Icon="expand_more" Size="3em"/>
+	</div>
+</div>
+
+<div class="section" id="about-me">
+	<div>
+		<MaterialIcon Icon="person" Size="2em"/>
+		<h2>About Me</h2>
+	</div>
+
+	<div>
+		<div>
+			<MaterialIcon Icon="speaker_notes"/>
+			<span>He/him</span>
+		</div>
+
+		<div>
+			<MaterialIcon Icon="school"/>
+			<span>Dakota State University</span>
+		</div>
+
+		<div>
+			<MaterialIcon Icon="place"/>
+			<span>Sioux Falls, SD</span>
+		</div>
+
+		<div>
+			<MaterialIcon Icon="work"/>
+			<span>KBR — Software Engineer</span>
+		</div>
+	</div>
+
+	<p>My name is Elliott DuCharme. I have been working as a software engineer for KBR in Sioux Falls, SD since June 2023. Before that, I was working as a Software Engineer intern for Daktronics. I earned my Bachelor's in Computer Science from Dakota State University, where I was a student from August 2020&ndash;May 2023. I was the lead Java programmer for my high school's FRC team for three years. My hobbies include archery, D&amp;D, exercise, gaming, and working on personal projects, usually ones that enhance quality of life.</p>
+</div>
+
+<div class="section" id="work-experience">
+	<div>
+		<MaterialIcon Icon="work" Size="2em"/>
+		<h2>Work Experience</h2>
+	</div>
+
+	<div>
+		<span>KBR &mdash; Software/Web Developer</span>
+		<span>June 2023 &ndash; Present</span>
+	</div>
+
+	<div>
+		<span>Daktronics &mdash; Software Design Student</span>
+		<span>May 2022 &ndash; May 2023</span>
+	</div>
+</div>
+
+<div class="section" id="projects">
+	<div>
+		<MaterialIcon Icon="code" Size="2em"/>
+		<h2>Projects</h2>
+	</div>
+
+	<p>I've developed @projects.Count projects over the years, all of which I'm very proud of, with more on the way!</p>
+
+	<div id="sortControls">
+		<span>Sort Projects By</span>
+
+		<div>
+			<select @bind="@sortMode" @onclick="@SortModeUpdated">
+				<option value="Name">Name</option>
+				<option value="Significance">Significance</option>
+				<option value="StartDate">StartDate</option>
+				<option value="EndDate">EndDate</option>
+			</select>
+
+			<select @bind="@sorting" @onclick="@SortModeUpdated">
+				<option value="Ascending">Ascending</option>
+				<option value="Descending">Descending</option>
+			</select>
+		</div>
+	</div>
+
+	<div id="projects-list">
+		@foreach (var project in projects)
+		{
+			<ProjectDisplay Project="@project"/>
+		}
+	</div>
+</div>
+
+<div id="contact-info">
+	<span>You can reach me at:</span>
+	<span>ellduc4@gmail.com</span>
+	<a href="https://www.linkedin.com/in/elliott-ducharme-aaa491212/">LinkedIn</a>
+	<span>507-858-9061</span>
+</div>
+
+@code {
+	private List<Project> projects = Project.GetProjects();
+	private SortMode sortMode = SortMode.Significance;
+	private string sorting = "Descending";
+
+	private void SortModeUpdated()
+	{
+		if (sorting == "Descending")
+		{
+			projects = sortMode switch
+			{
+				SortMode.Name => projects.OrderByDescending(p => p.name).ToList(),
+				SortMode.Significance => projects.OrderByDescending(p => p.significance).ToList(),
+				SortMode.StartDate => projects.OrderByDescending(p => p.startDate).ToList(),
+				SortMode.EndDate => projects.OrderByDescending(p => p.endDate).ToList(),
+				_ => throw new ArgumentOutOfRangeException()
+			};
+		}
+		else if (sorting == "Ascending")
+		{
+			projects = sortMode switch
+			{
+				SortMode.Name => projects.OrderBy(p => p.name).ToList(),
+				SortMode.Significance => projects.OrderBy(p => p.significance).ToList(),
+				SortMode.StartDate => projects.OrderBy(p => p.startDate).ToList(),
+				SortMode.EndDate => projects.OrderBy(p => p.endDate).ToList(),
+				_ => throw new ArgumentOutOfRangeException()
+			};
+		}
+
+		StateHasChanged();
+	}
+}

@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <base href="/" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <base href="/"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Elliott DuCharme Portfolio</title>
-    <link href="css/app.css" rel="stylesheet" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="css/app.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="favicon.png"/>
     <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet"> <!-- https://stackoverflow.com/questions/50303454/how-to-use-the-new-material-design-icon-themes-outlined-rounded-two-tone-and -->
 </head>
 
@@ -19,6 +19,13 @@
     gtag('js', new Date());
 
     gtag('config', 'G-PMC9MHP4J1');
+</script>
+
+<script>
+    function scrollToAboutMe() {
+        const scrollOptions = { behavior: 'smooth', block: 'start' };
+        document.getElementById('about-me').scrollIntoView(scrollOptions);
+    }
 </script>
 
 <body>
