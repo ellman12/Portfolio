@@ -54,7 +54,7 @@ public sealed record Project
 			{
 				name = "Graphical Photo Organizer (GPO)",
 				repoLink = "https://github.com/ellman12/Graphical-Photo-Organizer",
-				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when they were taken.",
+				briefDesc = "A C# WPF utility for organizing folders of photos and videos based on when items were taken.",
 				longDesc = "GPO is a WPF utility for organizing folders of photos and videos based on the dates each item was taken. I created GPO as a tool to help family, friends, and other people organize their messy folders of photos and videos. GPO from the get-go was designed to be very simple and easy to use, with plenty of customization and power user features like AutoSort, updating of photo/video metadata, etc. GPO has an entire separate window for controlling its behavior. It can sort items either manually or automatically. The former gives you more control, while the latter can quickly chew through folders with thousands of items in just a few minutes. In manual mode, you can do actions like rename files, change their date taken, delete them, etc. You can even watch video files inside of GPO. I am very proud of this project and very pleased with how it turned out, and I hope it can help people to keep their memories organized now and in the future.",
 				significance = 90,
 				images = new[] {("GPO/GPO1.png", "Main Graphical Photo Organizer Window"), ("GPO/GPO2.png", "Graphical Photo Organizer Settings Window")},

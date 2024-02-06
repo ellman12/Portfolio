@@ -1,4 +1,4 @@
-#projects-list > div {
+.project {
     width: 100%;
     box-sizing: border-box;
     border: 1px solid white;
@@ -11,9 +11,8 @@
         align-items: center;
         justify-content: space-between;
 
-        > h3 {
-            font-size: 1.4em;
-        }
+        > h3 { font-size: 1.4em; }
+        > p { white-space: nowrap; }
     }
 
     > p {
@@ -44,16 +43,29 @@
             visibility: hidden;
         }
 
-        > .iconBtn:first-of-type {
-            left: 6em;
-        }
+        > .iconBtn:first-of-type { left: 6em; }
 
-        > .iconBtn:nth-of-type(2) {
-            right: 6em;
-        }
+        > .iconBtn:nth-of-type(2) { right: 6em; }
 
-        &:hover > .iconBtn {
-            visibility: visible;
-        }
+        &:hover > .iconBtn { visibility: visible; }
     }
+}
+
+@media screen and (max-width: 1100px) {
+    .project > .images {
+        height: auto;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .project > div > h3 { font-size: 1.3em; }
+}
+
+@media screen and (max-width: 550px) {
+    .project > div > h3 { font-size: 1em; }
+}
+
+@media screen and (max-width: 550px) {
+    .project > div > p { font-size: 0.8em; }
 }

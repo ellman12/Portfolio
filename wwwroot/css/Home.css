@@ -28,6 +28,7 @@
 
 #header {
     align-items: center;
+    text-align: center;
     gap: 32px;
     height: 85vh;
     padding-top: 15vh;
@@ -64,11 +65,10 @@
 #about-me {
     > div:nth-of-type(2) {
         display: grid;
-        width: 50vw;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        gap: 16px;
+        width: 100%;
         box-sizing: border-box;
+        grid-template-columns: repeat(2, 400px);
+        gap: 16px;
 
         > div {
             display: flex;

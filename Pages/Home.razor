@@ -10,7 +10,7 @@
 	<p>Software Engineer, Web Developer</p>
 	<img src="https://avatars.githubusercontent.com/u/56001219?v=4" alt="Profile Picture"/>
 
-	<div>
+	<div onclick="window.location.href = '#about-me'">
 		<MaterialIcon Icon="expand_more" Size="3em"/>
 	</div>
 </div>
@@ -73,17 +73,20 @@
 
 	<div id="sortControls">
 		<span>Sort Projects By</span>
-		<select @bind="@sortMode" @onclick="@SortModeUpdated">
-			<option value="Name">Name</option>
-			<option value="Significance">Significance</option>
-			<option value="StartDate">StartDate</option>
-			<option value="EndDate">EndDate</option>
-		</select>
 
-		<select @bind="@sorting" @onclick="@SortModeUpdated">
-			<option value="Ascending">Ascending</option>
-			<option value="Descending">Descending</option>
-		</select>
+		<div>
+			<select @bind="@sortMode" @onclick="@SortModeUpdated">
+				<option value="Name">Name</option>
+				<option value="Significance">Significance</option>
+				<option value="StartDate">StartDate</option>
+				<option value="EndDate">EndDate</option>
+			</select>
+
+			<select @bind="@sorting" @onclick="@SortModeUpdated">
+				<option value="Ascending">Ascending</option>
+				<option value="Descending">Descending</option>
+			</select>
+		</div>
 	</div>
 
 	<div id="projects-list">
