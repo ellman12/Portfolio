@@ -9,7 +9,7 @@
 		<div class="images">
 			@if (Project.images.Length > 1) { <IconButton Icon="arrow_back_ios" OnClick="@(() => Index--)"/> }
 			
-			<img src="Images/@CurrentImage.Item1" alt="@CurrentImage.Item2" title="@CurrentImage.Item2" loading="lazy"/>
+			<img src="Images/@CurrentImage.Item1" alt="@CurrentImage.Item2" title="@CurrentImage.Item2" loading="eager"/>
 
 			@if (Project.images.Length > 1) { <IconButton Icon="arrow_forward_ios" OnClick="@(() => Index++)"/> }
 		</div>
