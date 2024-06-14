@@ -26,7 +26,7 @@
     }
 
     &:not(#header) {
-        padding: 22px 16px;
+        padding: 20px 16px;
         gap: 16px;
         box-sizing: border-box;
     }
