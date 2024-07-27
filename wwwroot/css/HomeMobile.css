@@ -10,7 +10,7 @@
     }
 
     #about-me > div:nth-of-type(2) {
-        grid-template-columns: repeat(2, 300px);
+        grid-template-columns: repeat(2, 400px);
     }
 }
 

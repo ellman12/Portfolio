@@ -67,7 +67,7 @@
         display: grid;
         width: 100%;
         box-sizing: border-box;
-        grid-template-columns: repeat(2, 400px);
+        grid-template-columns: repeat(2, 480px);
         gap: 16px;
 
         > div {
