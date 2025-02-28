@@ -7,12 +7,12 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 
 export default function TopSection() {
     return (
-        <div className="flex flex-row items-center justify-between">
+        <div className="relative flex flex-row items-center justify-between">
             <div className="flex flex-col">
                 <Title/>
             </div>
 
-            <div className="flex flex-col items-end gap-0.5">
+            <div className="absolute top-0 right-0 flex flex-col items-end gap-0.5">
                 <div className="flex flex-row items-center gap-2">
                     <p>507-858-9061</p>
                     <LocalPhoneIcon/>
