@@ -8,7 +8,7 @@ interface Props {
 
 const Section: FC<Props> = ({title, children}) => {
     return (
-        <section id={title.toLowerCase().replace(" ", "-")} className="px-1 pt-4 flex flex-col">
+        <section id={title.toLowerCase().replace(" ", "-")} className="px-1 flex flex-col">
             <H2>{title}</H2>
 
             {children}

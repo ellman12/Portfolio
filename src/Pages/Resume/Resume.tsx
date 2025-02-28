@@ -1,6 +1,7 @@
 import TopSection from "./components/Sections/TopSection.tsx";
 import SkillsSection from "./components/Sections/SkillsSection.tsx";
 import WorkExperienceSection from "./components/Sections/WorkExperience/WorkExperienceSection.tsx";
+import ProjectsSection from "./components/Sections/ProjectsSection/ProjectsSection.tsx";
 import "./Resume.css";
 
 export default function Resume() {
@@ -10,5 +11,6 @@ export default function Resume() {
         <TopSection/>
         <SkillsSection/>
         <WorkExperienceSection/>
+        <ProjectsSection/>
     </div>);
 }
