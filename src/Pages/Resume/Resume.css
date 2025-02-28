@@ -1,3 +1,7 @@
+* {
+    user-select: initial;
+}
+
 b {
     font-weight: 600;
 }
