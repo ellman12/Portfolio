@@ -6,7 +6,7 @@ import EducationSection from "./components/Sections/EducationSection.tsx";
 import "./Resume.css";
 
 export default function Resume() {
-    return (<div className="bg-[#212529] py-4 px-12 mx-auto flex flex-col gap-4" style={{width: "8.5in", height: "11in"}}>
+    return (<div className="bg-[#212529] py-6 px-12 mx-auto flex flex-col gap-4" style={{width: "8.5in", height: "11in"}}>
         <title>Elliott DuCharme Resume</title>
 
         <TopSection/>
