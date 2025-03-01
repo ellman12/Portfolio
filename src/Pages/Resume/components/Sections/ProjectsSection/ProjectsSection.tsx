@@ -5,6 +5,7 @@ import Project from "./Project.tsx";
 export default function ProjectsSection() {
     return (
         <Section title="Projects">
+            <div className="flex flex-col gap-4">
             <Project name="MemoryMosaic" href="https://github.com/ellman12/MemoryMosaic" hrefDisplay="github.com/ellman12/MemoryMosaic">
                 <li>A Blazor app for storing a lifetime of photos and videos in PostgreSQL.</li>
                 <li>Gained extensive experience with media metadata and creating/optimizing web apps and databases.</li>
@@ -17,11 +18,12 @@ export default function ProjectsSection() {
                 <li>Utilized NUnit for test-driven development with extensive unit and integration tests to ensure reliability, and AWS RDS for scalable backend storage.</li>
             </Project>
 
-            <Project name="Dish Up">
-                <li>Blazor app for creating, managing, and sharing cooking recipes, with a great UX on different devices.</li>
-                <li>Led the project using Scrum. Delegated tasks, helped design UI, and helped members get tasks done.</li>
-                <li>Validated functionality of backend with NUnit unit tests and test-driven development.</li>
-            </Project>
+            {/*<Project name="Dish Up">*/}
+            {/*    <li>Blazor app for creating, managing, and sharing cooking recipes, with a great UX on different devices.</li>*/}
+            {/*    <li>Led the project using Scrum. Delegated tasks, helped design UI, and helped members get tasks done.</li>*/}
+            {/*    <li>Validated functionality of backend with NUnit unit tests and test-driven development.</li>*/}
+            {/*</Project>*/}
+            </div>
         </Section>
     )
 }
