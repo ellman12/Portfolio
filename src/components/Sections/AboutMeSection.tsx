@@ -14,6 +14,12 @@ import SportsEsportsIcon from "@mui/icons-material/SportsEsports";
 import PrecisionManufacturingIcon from "@mui/icons-material/PrecisionManufacturing";
 import PedalBikeIcon from "@mui/icons-material/PedalBike";
 import HikingIcon from "@mui/icons-material/Hiking";
+import ShieldIcon from "@mui/icons-material/Shield";
+import SettingsIcon from "@mui/icons-material/Settings";
+import ParkRoundedIcon from "@mui/icons-material/ParkRounded";
+import PetsIcon from "@mui/icons-material/Pets";
+import AgricultureIcon from "@mui/icons-material/Agriculture";
+import {Paid} from "@mui/icons-material";
 import ScrollOnceAnimation from "../ScrollOnceAnimation.tsx";
 
 export default function AboutMeSection() {
@@ -49,6 +55,21 @@ export default function AboutMeSection() {
                             <Tidbit icon={<SportsEsportsIcon/>}>Game Design</Tidbit>
                             <Tidbit icon={<HikingIcon/>}>Hiking</Tidbit>
                             <Tidbit icon={<PrecisionManufacturingIcon/>}>Robotics</Tidbit>
+                        </div>
+                    </ScrollOnceAnimation>
+                </ScrollOnceAnimation>
+
+                <ScrollOnceAnimation>
+                    <H3 className="pl-4">Favorite Games</H3>
+
+                    <ScrollOnceAnimation>
+                        <div className="mt-6 grid grid-cols-2 gap-4 sm:px-8 mb-4">
+                            <Tidbit icon={<Paid/>}>Mario</Tidbit>
+                            <Tidbit icon={<ShieldIcon/>}>Zelda</Tidbit>
+                            <Tidbit icon={<SettingsIcon/>}>Factorio</Tidbit>
+                            <Tidbit icon={<PetsIcon/>}>Monster Hunter</Tidbit>
+                            <Tidbit icon={<ParkRoundedIcon/>}>Terraria</Tidbit>
+                            <Tidbit icon={<AgricultureIcon/>}>Stardew Valley</Tidbit>
                         </div>
                     </ScrollOnceAnimation>
                 </ScrollOnceAnimation>
