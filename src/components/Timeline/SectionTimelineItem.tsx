@@ -1,8 +1,8 @@
-import {ComponentProps, FC, ReactNode, useState} from "react";
+import {ComponentProps, FC, ReactNode, useEffect, useState} from "react";
 import {OverridableStringUnion} from "@mui/types";
 import {TimelineConnector, TimelineContent, TimelineDot, TimelineDotPropsColorOverrides, TimelineItem, TimelineOppositeContent, TimelineSeparator} from "@mui/lab";
 import {motion} from "framer-motion";
-import { useWindowSize } from "@uidotdev/usehooks";
+import {useWindowSize} from "@uidotdev/usehooks";
 
 type Props = {
     startDate: string;
@@ -11,12 +11,20 @@ type Props = {
     color: OverridableStringUnion<"primary" | "secondary" | "error" | "warning" | "info" | "success", TimelineDotPropsColorOverrides>;
     lastItem?: boolean;
     children: ReactNode;
+    expandedItem?: string;
+    setExpandedItem?: (title: string) => void;
     expandedChildren?: ReactNode;
 } & Omit<ComponentProps<typeof TimelineDot>, "color">;
 
-const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = false, color, children, expandedChildren = undefined}) => {
+const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = false, color, children, expandedItem = "", setExpandedItem = () => {}, expandedChildren = undefined}) => {
     const [step, setStep] = useState<"closed" | "openingWide" | "closingWide" | "openingTall" | "closingTall" | "opened">("closed");
     const {width} = useWindowSize();
+
+    useEffect(() => {
+        if (expandedItem !== title && step !== "closed") {
+            setStep("closingTall");
+        }
+    }, [expandedItem]);
 
     function getDateRangeWidth() {
         if (width == null)
@@ -38,6 +46,8 @@ const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = f
             setStep("openingWide");
         else if (step === "opened")
             setStep("closingTall");
+
+        setExpandedItem(title);
     }
 
     return (

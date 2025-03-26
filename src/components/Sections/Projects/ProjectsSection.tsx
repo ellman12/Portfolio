@@ -4,8 +4,11 @@ import Projects from "./Projects.ts";
 import SectionTimeline from "../../Timeline/SectionTimeline.tsx";
 import ProjectDisplay from "./ProjectDisplay.tsx";
 import ScrollOnceAnimation from "../../ScrollOnceAnimation.tsx";
+import {useState} from "react";
 
 export default function ProjectsSection() {
+    const [expandedItem, setExpandedItem] = useState("");
+
     return (
         <Section icon={<CodeIcon/>} title="Projects" disablePaddingX>
             <ScrollOnceAnimation>
@@ -14,7 +17,7 @@ export default function ProjectsSection() {
 
             <SectionTimeline>
                 {Projects.sort((a, b) => a.startDate > b.startDate ? 1 : -1).map((project, index) => (
-                    <ProjectDisplay key={project.name} project={project} lastItem={index === Projects.length - 1}/>
+                    <ProjectDisplay key={project.name} project={project} lastItem={index === Projects.length - 1} expandedItem={expandedItem} setExpandedItem={setExpandedItem}/>
                 ))}
             </SectionTimeline>
         </Section>
