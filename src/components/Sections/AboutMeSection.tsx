@@ -27,7 +27,7 @@ export default function AboutMeSection() {
         <Section icon={<PersonIcon/>} title="About Me">
             <div className="flex flex-col gap-4">
                 <ScrollOnceAnimation>
-                    <div className="grid grid-cols-2 gap-4 sm:px-8 mb-4">
+                    <div className="grid grid-cols-2 gap-4 px-6 sm:px-8 mb-4">
                         <Tidbit icon={<WorkIcon/>}>Software Engineer at KBR</Tidbit>
                         <Tidbit icon={<PlaceIcon/>}>Sioux Falls, SD</Tidbit>
 
@@ -46,7 +46,7 @@ export default function AboutMeSection() {
                     <H3 className="pl-4">Hobbies</H3>
 
                     <ScrollOnceAnimation>
-                        <div className="mt-6 grid grid-cols-2 gap-4 sm:px-8 mb-4">
+                        <div className="mt-6 grid grid-cols-2 gap-4 px-6 sm:px-8 mb-4">
                             <Tidbit icon={<AdsClickIcon/>}>Archery</Tidbit>
                             <Tidbit icon={<PedalBikeIcon/>}>Biking</Tidbit>
                             <Tidbit icon={<OutdoorGrillIcon/>}>Cooking</Tidbit>
@@ -63,7 +63,7 @@ export default function AboutMeSection() {
                     <H3 className="pl-4">Favorite Games</H3>
 
                     <ScrollOnceAnimation>
-                        <div className="mt-6 grid grid-cols-2 gap-4 sm:px-8 mb-4">
+                        <div className="mt-6 grid grid-cols-2 gap-4 px-6 sm:px-8 mb-4">
                             <Tidbit icon={<Paid/>}>Mario</Tidbit>
                             <Tidbit icon={<ShieldIcon/>}>Zelda</Tidbit>
                             <Tidbit icon={<SettingsIcon/>}>Factorio</Tidbit>
