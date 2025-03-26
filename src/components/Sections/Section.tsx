@@ -15,7 +15,7 @@ const Section: FC<Props> = ({icon, title, disablePaddingX = false, children}) =>
         <section id={title.toLowerCase().replace(" ", "-")} className="pt-4 pb-8 flex flex-col">
             <div className="border border-white mx-4 mb-4"></div>
 
-            <div className={`flex flex-row items-center gap-4 mb-6 ${sidePadding}`}>
+            <div className={`flex flex-row items-center gap-4 mb-6 mx-2 ${sidePadding}`}>
                 {icon}
                 <H2>{title}</H2>
             </div>
