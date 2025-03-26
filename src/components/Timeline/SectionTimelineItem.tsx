@@ -21,8 +21,13 @@ const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = f
     const {width} = useWindowSize();
 
     useEffect(() => {
-        if (expandedItem !== title && step !== "closed") {
-            setStep("closingTall");
+        if (expandedItem !== title) {
+            if (step === "opened")
+                setStep("closingTall");
+            else if (step === "openingWide")
+                setStep("closingWide");
+            else if (step === "openingTall")
+                setStep("closingTall");
         }
     }, [expandedItem]);
 
