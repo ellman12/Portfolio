@@ -12,7 +12,9 @@ const Section: FC<Props> = ({icon, title, disablePaddingX = false, children}) =>
     const sidePadding = "px-1 sm:px-2 lg:px-4 ";
 
     return (
-        <section id={title.toLowerCase().replace(" ", "-")} className="border-t-2 border-white pt-4 pb-8 flex flex-col">
+        <section id={title.toLowerCase().replace(" ", "-")} className="pt-4 pb-8 flex flex-col">
+            <div className="border border-white mx-4 mb-4"></div>
+
             <div className={`flex flex-row items-center gap-4 mb-6 ${sidePadding}`}>
                 {icon}
                 <H2>{title}</H2>
