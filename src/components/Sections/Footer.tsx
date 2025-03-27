@@ -12,7 +12,8 @@ const quotes = [
     "You have power over your mind, not outside events. Realize this, and you will find strength.",
     "If you believe in yourself, and with a tiny pinch of magic, all your dreams can come true!",
     "Life happens wherever you are, whether you make it or not.",
-    "The inner machinations of my mind are an enigma..."
+    "The inner machinations of my mind are an enigma...",
+    "While it is always best to believe in oneself, a little help from others can be a great blessing."
 ];
 
 export default function Footer() {
