@@ -13,7 +13,10 @@ const quotes = [
     "If you believe in yourself, and with a tiny pinch of magic, all your dreams can come true!",
     "Life happens wherever you are, whether you make it or not.",
     "The inner machinations of my mind are an enigma...",
-    "While it is always best to believe in oneself, a little help from others can be a great blessing."
+    "While it is always best to believe in oneself, a little help from others can be a great blessing.",
+    "The best way to defeat your enemy is to make them your friend.",
+    "Even lessons learned the hard way are lessons learned.",
+    "Never put off until tomorrow what can be done today."
 ];
 
 export default function Footer() {
