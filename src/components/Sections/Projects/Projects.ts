@@ -84,7 +84,7 @@ const Projects: Project[] = [
     {
         name: "Arcane Defense",
         repoLink: "https://github.com/ellman12/Arcane-Defense",
-        briefDesc: "Final project for my game design class. Defend your house from an endless horde of enemies using your arsenal of magical attacks. Play the game <a style='color: cornflowerblue' target='_blank' href='https://simmer.io/@ellman13/arcane-defense'>here</a>!",
+        briefDesc: "Final project for my game design class. Defend your house from an endless horde of enemies using your arsenal of magical attacks. Play the game <a style='color: cornflowerblue' target='_blank' href='https://ellman12.itch.io/arcane-defense'>here</a>!",
         longDesc: `This is easily one of my favorite projects I've done. Not only was it fun to come up with the ideas and implement them, but seeing people enjoy them was so rewarding.`,
         images: [],
         significance: 60,
