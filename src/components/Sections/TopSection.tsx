@@ -16,7 +16,7 @@ export default function TopSection() {
                 <Avatar/>
 
                 <div className="grid grid-cols-2 sm:flex sm:flex-row sm:items-center gap-4 mt-4 mb-0 md:mb-4">
-                    <Button variant="contained" color="primary" href="https://github.com/ellman12/ellman12/blob/main/Elliott%20DuCharme%20Resume.pdf" startIcon={<DescriptionIcon/>}>Resume</Button>
+                    <Button variant="contained" color="primary" href="https://ellman12.github.io/Resume/" startIcon={<DescriptionIcon/>}>Resume</Button>
                     <Button variant="contained" color="error" href="mailto:ellduc4@gmail.com" startIcon={<EmailIcon/>}>Email</Button>
                     <Button variant="contained" color="info" href="https://www.linkedin.com/in/elliott-ducharme/" startIcon={<LinkedInIcon/>}>LinkedIn</Button>
                     <Button variant="contained" color="GitHub" href="https://github.com/ellman12/" startIcon={<GitHubIcon/>}>GitHub</Button>
