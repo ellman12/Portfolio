@@ -1,4 +1,4 @@
-import {useState} from "react";
+import { useEffect, useState } from "react";
 
 const quotes = [
     "No one gets through life alone.",
@@ -16,27 +16,35 @@ const quotes = [
     "While it is always best to believe in oneself, a little help from others can be a great blessing.",
     "The best way to defeat your enemy is to make them your friend.",
     "Even lessons learned the hard way are lessons learned.",
-    "Never put off until tomorrow what can be done today."
+    "Never put off until tomorrow what can be done today.",
+    "You need to let go of the past so you can have a future."
 ];
 
 export default function Footer() {
-    const getRandomIndex = () => Math.floor(Math.random() * quotes.length);
+    const [shownQuotes, setShownQuotes] = useState<string[]>([]);
+    const [quote, setQuote] = useState("");
 
-    const getRandomQuote = () => {
-        let newQuote = quote;
+    useEffect(() => {
+        showRandomQuote();
+    }, []);
 
-        while (newQuote === quote)
-            newQuote = quotes[getRandomIndex()];
+    const showRandomQuote = () => {
+        let remainingQuotes = quotes.filter(q => !shownQuotes.includes(q));
 
-        setQuote(newQuote);
+        if (remainingQuotes.length === 0) {
+            setShownQuotes([]);
+            remainingQuotes = quotes;
+        }
+
+        const randomQuote = remainingQuotes[Math.floor(Math.random() * remainingQuotes.length)];
+        setQuote(randomQuote);
+        setShownQuotes(prev => [...prev, randomQuote]);
     };
-
-    const [quote, setQuote] = useState(quotes[getRandomIndex()]);
 
     return (
         <footer className="border-t border-slate-400 text-slate-400 p-4 flex flex-col gap-2">
             <p>Made with ❤️ by me</p>
-            <p className="cursor-pointer" onClick={getRandomQuote}>
+            <p className="cursor-pointer" onClick={showRandomQuote}>
                 <i>{quote}</i>
             </p>
         </footer>
