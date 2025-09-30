@@ -10,7 +10,7 @@ interface Props {
 const ProjectCarousel: FC<Props> = ({project}) => {
     const images = project.images;
 
-    return (<>
+    return (<div className="mx-4">
         {images.length === 1 && <CarouselItem src={images[0][0]} alt={images[0][1]}/>}
 
         {images.length > 1 &&
@@ -19,7 +19,7 @@ const ProjectCarousel: FC<Props> = ({project}) => {
                     {images.map(([src, alt]) => <CarouselItem key={src} src={src} alt={alt}/>)}
 				</Carousel>
 			</div>}
-    </>);
+    </div>);
 };
 
 export default ProjectCarousel;
