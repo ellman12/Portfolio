@@ -15,8 +15,8 @@ export default function WorkExperienceSection() {
                         <SectionTimelineItem startDate="May 2022" endDate="May 2023" title="Software Engineer Intern — Daktronics" color="primary">
                             <div className="text-sm md:text-base">
                                 <p>Tested new software and hardware versions for digital signage using Azure DevOps.</p>
-                                <p>Communicated issues with members of the appropriate teams when issues arose.</p>
-                                <p>Contributed to Orion, a C# web app for automating test cases years in the making.</p>
+                                <p>Escalated and tracked critical defects, ensuring rapid fixes and minimizing downtime.</p>
+                                <p>Implemented new features in Orion, a large-scale C# web app for test automation, increasing automated test coverage and accelerating delivery for multiple product lines.</p>
                             </div>
                         </SectionTimelineItem>
                     </ScrollOnceAnimation>
@@ -24,9 +24,9 @@ export default function WorkExperienceSection() {
                     <ScrollOnceAnimation>
                         <SectionTimelineItem startDate="June 2023" endDate="Present" title="Software Engineer — KBR" lastItem={true} color="success">
                             <div className="text-sm md:text-base">
-                                <p>Rewrote FEWS NET website with React, Next.js, TS, and Tailwind.</p>
-                                <p>Assisted with testing before release and helped resolve issues identified during testing.</p>
-                                <p>Currently working on SWIM, an internal React app for managing employees</p>
+                                <p>Rewrote ReactTS apps and created reusable components for global famine prediction, preparation, and management.</p>
+                                <p>Leveraging modern tooling, our main website and map viewers have become significantly faster and more reliable.</p>
+                                <p>Our historical and current work has saved millions of lives across the world, especially in Africa.</p>
                             </div>
                         </SectionTimelineItem>
                     </ScrollOnceAnimation>
