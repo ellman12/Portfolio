@@ -22,7 +22,7 @@ export default function WorkExperienceSection() {
                     </ScrollOnceAnimation>
 
                     <ScrollOnceAnimation>
-                        <SectionTimelineItem startDate="June 2023" endDate="Present" title="Software Engineer — KBR" lastItem={true} color="success">
+                        <SectionTimelineItem startDate="June 2023" endDate="Present" title="Software Engineer — KBR" lastItem={true} color="primary">
                             <div className="text-sm md:text-base">
                                 <p>Rewrote ReactTS apps and created reusable components for global famine prediction, preparation, and management.</p>
                                 <p>Leveraging modern tooling, our main website and map viewers have become significantly faster and more reliable.</p>
