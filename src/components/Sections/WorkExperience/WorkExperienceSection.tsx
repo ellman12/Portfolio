@@ -24,9 +24,9 @@ export default function WorkExperienceSection() {
                     <ScrollOnceAnimation>
                         <SectionTimelineItem startDate="June 2023" endDate="Present" title="Software Engineer — KBR" lastItem={true} color="primary">
                             <div className="text-sm md:text-base">
-                                <p>Rewrote ReactTS apps and created reusable components for global famine prediction, preparation, and management.</p>
-                                <p>Leveraging modern tooling, our main website and map viewers have become significantly faster and more reliable.</p>
-                                <p>Our historical and current work has saved millions of lives across the world, especially in Africa.</p>
+                                <p>Rebuilt ReactTS apps and reusable components for global famine prediction, preparation, and management.</p>
+                                <p>Optimized map viewers, reducing page load times by 90+% and vastly improving performance and reliability.</p>
+                                <p>Enabled humanitarian organizations to make faster, data-driven decisions, directly supporting famine prevention efforts across Africa and beyond.</p>
                             </div>
                         </SectionTimelineItem>
                     </ScrollOnceAnimation>
