@@ -1,8 +1,8 @@
-import {ComponentProps, FC, ReactNode, useEffect, useState} from "react";
-import {OverridableStringUnion} from "@mui/types";
-import {TimelineConnector, TimelineContent, TimelineDot, TimelineDotPropsColorOverrides, TimelineItem, TimelineOppositeContent, TimelineSeparator} from "@mui/lab";
-import {motion} from "framer-motion";
-import {useWindowSize} from "@uidotdev/usehooks";
+import { ComponentProps, FC, ReactNode, useEffect, useState } from "react";
+import { OverridableStringUnion } from "@mui/types";
+import { TimelineConnector, TimelineContent, TimelineDot, TimelineDotPropsColorOverrides, TimelineItem, TimelineOppositeContent, TimelineSeparator } from "@mui/lab";
+import { motion } from "framer-motion";
+import { useWindowSize } from "@uidotdev/usehooks";
 
 type Props = {
     startDate: string;
@@ -55,8 +55,9 @@ const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = f
         setExpandedItem(title);
     }
 
+    const hoverClasses = "hover:cursor-pointer hover:bg-slate-700 hover:transition hover:duration-500 hover:ease-in-out";
     return (
-        <TimelineItem onClick={onClick} className={`${expandedChildren !== undefined ? "cursor-pointer" : ""}`}>
+        <TimelineItem onClick={onClick} className={`${expandedChildren !== undefined && step === "closed" ? hoverClasses : ""}`}>
             <motion.div
                 initial={{width: getDateRangeWidth()}}
                 animate={step !== "closed" && step !== "closingWide" ? {width: 0} : {width: getDateRangeWidth()}}
