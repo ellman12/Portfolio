@@ -26,6 +26,7 @@ export default function WorkExperienceSection() {
                             <div className="text-sm md:text-base">
                                 <p>Rebuilt ReactTS apps and reusable components for global famine prediction, preparation, and management.</p>
                                 <p>Optimized map viewers, reducing page load times by 90+% and vastly improving performance and reliability.</p>
+                                <p>Built CI/CD pipelines with automated testing to accelerate deployment and improve code reliability.</p>
                                 <p>Enabled humanitarian organizations to make faster, data-driven decisions, directly supporting famine prevention efforts across Africa and beyond.</p>
                             </div>
                         </SectionTimelineItem>
