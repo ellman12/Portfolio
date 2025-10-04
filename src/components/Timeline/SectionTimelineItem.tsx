@@ -93,7 +93,7 @@ const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = f
             <TimelineContent style={{paddingLeft: 0, paddingRight: 0, objectFit: "contain", overflow: "hidden"}}>
                 <motion.div
                     initial={{backgroundColor: "#00000000"}}
-                    animate={step === "openingWide" || step === "openingTall" || step === "opened" ? {backgroundColor: "#101114", padding: 16, marginTop: 8, marginBottom: 8} : {backgroundColor: "#00000000", padding: 0, marginTop: 0, marginBottom: 0}}
+                    animate={step === "openingWide" || step === "openingTall" || step === "opened" ? {backgroundColor: "#101114", padding: 16, marginTop: 8, marginBottom: 8, cursor: "pointer"} : {backgroundColor: "#00000000", padding: 0, marginTop: 0, marginBottom: 0}}
                     transition={{duration: 0.5, ease: "easeInOut"}}
                 >
                     <div className="mb-4 pl-4 pr-4">
