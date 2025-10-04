@@ -1,4 +1,4 @@
-import { ComponentProps, FC, ReactNode, useEffect, useState } from "react";
+import { FC, ReactNode, useEffect, useState } from "react";
 import { OverridableStringUnion } from "@mui/types";
 import { TimelineConnector, TimelineContent, TimelineDot, TimelineDotPropsColorOverrides, TimelineItem, TimelineOppositeContent, TimelineSeparator } from "@mui/lab";
 import { motion } from "framer-motion";
@@ -14,7 +14,7 @@ type Props = {
     expandedItem?: string;
     setExpandedItem?: (title: string) => void;
     expandedChildren?: ReactNode;
-} & Omit<ComponentProps<typeof TimelineDot>, "color">;
+};
 
 const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = false, color, children, expandedItem = "", setExpandedItem = () => {}, expandedChildren = undefined}) => {
     const [step, setStep] = useState<"closed" | "openingWide" | "closingWide" | "openingTall" | "closingTall" | "opened">("closed");
