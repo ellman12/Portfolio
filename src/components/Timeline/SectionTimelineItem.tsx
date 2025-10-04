@@ -14,9 +14,10 @@ type Props = {
     expandedItem?: string;
     setExpandedItem?: (title: string) => void;
     expandedChildren?: ReactNode;
+    href?: string;
 };
 
-const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = false, color, children, expandedItem = "", setExpandedItem = () => {}, expandedChildren = undefined}) => {
+const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = false, color, children, expandedItem = "", setExpandedItem = () => {}, expandedChildren = undefined, href}) => {
     const [step, setStep] = useState<"closed" | "openingWide" | "closingWide" | "openingTall" | "closingTall" | "opened">("closed");
     const {width} = useWindowSize();
 
@@ -97,7 +98,8 @@ const SectionTimelineItem: FC<Props> = ({startDate, endDate, title, lastItem = f
                     transition={{duration: 0.5, ease: "easeInOut"}}
                 >
                     <div className="mb-4 pl-4 pr-4">
-                        <p className="font-semibold text-sm md:text-base">{title}</p>
+                        {href && <a href={href} onClick={e => e.stopPropagation()} target="_blank" className="font-semibold text-sm md:text-base hover:underline !text-blue-400">{title}</a>}
+                        {!href && <p className="font-semibold text-sm md:text-base">{title}</p>}
 
                         {children}
                     </div>

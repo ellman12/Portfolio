@@ -26,7 +26,7 @@ const ProjectDisplay: FC<Props> = ({project, lastItem, expandedItem, setExpanded
 
     return (
         <ScrollOnceAnimation>
-            <SectionTimelineItem startDate={project.startDate.toLocaleDateString(undefined, dateOptions)} endDate={project.endDate?.toLocaleDateString(undefined, dateOptions) ?? "Present"} expandedChildren={expandedChildren()} title={project.name} color="primary" lastItem={lastItem} expandedItem={expandedItem} setExpandedItem={setExpandedItem}>
+            <SectionTimelineItem startDate={project.startDate.toLocaleDateString(undefined, dateOptions)} endDate={project.endDate?.toLocaleDateString(undefined, dateOptions) ?? "Present"} expandedChildren={expandedChildren()} title={project.name} color="primary" lastItem={lastItem} expandedItem={expandedItem} setExpandedItem={setExpandedItem} href={project.repoLink}>
                 <div className={`flex flex-col gap-4`}>
                     <div className="text-sm md:text-base" dangerouslySetInnerHTML={{__html: project.briefDesc}}/>
                 </div>
