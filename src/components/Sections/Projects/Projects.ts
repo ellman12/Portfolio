@@ -15,7 +15,7 @@ const Projects: Project[] = [
         repoLink: "https://github.com/ellman12/MemoryMosaic",
         briefDesc: "MemoryMosaic is a free and open source photo/video manager, powered by Blazor and PostgreSQL.",
         longDesc: `I started working on MM when Google Photos announced in October 2020 their free tier was ending in July 2021. I had been using it for years, so I needed an alternative, and a friend suggested to make my own replacement. I quickly started learning Blazor and PostgreSQL, and a few months later the first version was ready. This is one of my largest projects at over 2500 commits, and it's had two major updates to add features and ensure functionality decades into the future.`,
-        significance: 100,
+        significance: 95,
         images: [
             ["MM/Home.png", "Home Page"],
             ["MM/Import.png", "Import Page"],
@@ -31,18 +31,18 @@ const Projects: Project[] = [
         endDate: new Date("2024-2-2")
     },
     {
-        name: "WingTech Bot Mk 2",
-        repoLink: "https://github.com/ellman12/WingTechBot-Mk-2",
-        briefDesc: "A Discord bot written in C# for a friend's private Discord server, providing features like a reaction tracking and karma system, games, inside jokes, and an LLM-powered AI chatbot using Google Gemini.",
+        name: "WingTech Bot Rewrite",
+        repoLink: "https://github.com/ellman12/WingTechBot-MK3",
+        briefDesc: "A TypeScript Discord bot for a friend's private Discord server, providing features like a reaction tracking and karma system, games, inside jokes, and an LLM-powered AI chatbot using Google Gemini.",
         longDesc: `There were some limitations with the original bot, primarily with its karma system. After some discussions about the minimum viable product, I spent a few weeks on the rewrite. In addition to gaining AWS experience, I wanted more experience with automated testing. Mk 2 has extensive unit/integration tests which are very satisfying and ensure reliability.`,
         images: [
             ["WTB/WTB 1.png", "Karma Leaderboard"],
             ["WTB/WTB 2.png", "Game of Hangman"],
             ["WTB/WTB 3.png", "Reaction Tracking"],
         ],
-        significance: 95,
-        startDate: new Date("2024-12-22"),
-        endDate: new Date("2025-02-11")
+        significance: 100,
+        startDate: new Date("2025-7-10"),
+        endDate: new Date("2026-1-26")
     },
     {
         name: "Graphical Photo Organizer ",
