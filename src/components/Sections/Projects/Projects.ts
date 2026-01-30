@@ -33,12 +33,13 @@ const Projects: Project[] = [
     {
         name: "WingTech Bot Rewrite",
         repoLink: "https://github.com/ellman12/WingTechBot-MK3",
-        briefDesc: "A TypeScript Discord bot for a friend's private Discord server, providing features like a reaction tracking and karma system, games, inside jokes, and an LLM-powered AI chatbot using Google Gemini.",
-        longDesc: `There were some limitations with the original bot, primarily with its karma system. After some discussions about the minimum viable product, I spent a few weeks on the rewrite. In addition to gaining AWS experience, I wanted more experience with automated testing. Mk 2 has extensive unit/integration tests which are very satisfying and ensure reliability.`,
+        briefDesc: "A TypeScript Discord bot for a private server, featuring karma tracking, reaction analytics, moderation tools, a soundboard, message archiving, and an LLM-powered chatbot using Google Gemini.",
+        longDesc: "WingTech Bot MK3 is the third major iteration of a Discord bot originally built to support a private community. Earlier versions had limitations—particularly around the karma system and command architecture—which motivated a full rewrite.<br/><br/> In early 2025, I rewrote the bot in C#, but ran into significant issues with the available Discord API wrapper, which lagged behind Discord's REST API. After evaluating alternatives and discussing trade-offs with a collaborator, we migrated the project to TypeScript using Discord.js.<br/><br/> This rewrite significantly improved developer experience, API reliability, and long-term maintainability. For example, our tests ran faster and more reliably, and new issues appeared in production less often. The bot now includes a modular command system, advanced reaction and karma analytics backed by persistent database storage, moderation controls, message archiving, a soundboard, and an LLM-powered chatbot using Google Gemini.<br/><br/> The project is supported by a CI/CD pipeline with automated testing and deployment to production, enabling safer iteration and faster feature development. ",
         images: [
             ["WTB/WTB 1.png", "Karma Leaderboard"],
-            ["WTB/WTB 2.png", "Game of Hangman"],
-            ["WTB/WTB 3.png", "Reaction Tracking"],
+            ["WTB/WTB 2.png", "Reactions Given"],
+            ["WTB/WTB 3.png", "Most Used Emotes"],
+            ["WTB/WTB 4.png", "Banning Users from Features"]
         ],
         significance: 100,
         startDate: new Date("2025-7-10"),
@@ -50,7 +51,7 @@ const Projects: Project[] = [
         briefDesc: "A C# WPF utility for organizing folders of photos and videos based on when items were taken.",
         longDesc: "I created GPO to help family, friends, and others organize their folders of photos and videos. Thus, it was designed to be very simple and easy to use, but with plenty of customization and power user features. Overall, I think it achieved this and is a very slick utility.",
         images: [
-            ["GPO/GPO1.png", "Main Graphical Photo Organizer Window"],
+            ["GPO/GPO1.png", "Main Graphical Photo Organizer Window"]
             // ["GPO/GPO2.png", "Graphical Photo Organizer Settings Window"] //Disabled because of weird scaling issues with Carousel
         ],
         significance: 90,
