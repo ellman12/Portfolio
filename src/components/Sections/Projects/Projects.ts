@@ -74,7 +74,7 @@ const Projects: Project[] = [
     },
     {
         name: "AutoHotkey Scripts",
-        repoLink: "https://github.com/ellman12/AutoHotkey-V2",
+        repoLink: "https://github.com/ellman12/AutoHotkey-Scripts",
         briefDesc: "Extensive repository of AutoHotkey scripts automating many repetitive daily computer tasks.",
         longDesc: "I discovered AHK in high school, and nothing has been the same since then. It started as a few simple scripts but grew very quickly, and has evolved significantly since then. These scripts have become so ingrained in my daily workflow and muscle memory that I can't live without them. They have significantly improved my code quality and output.",
         images: [],
