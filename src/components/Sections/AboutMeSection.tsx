@@ -1,8 +1,9 @@
 import H3 from "../H3.tsx";
 import Section from "./Section.tsx";
 import Tidbit from "../Tidbit.tsx";
-import { AdsClick, Agriculture, BugReport, Casino, Chat, FitnessCenter, Hiking, OutdoorGrill, Paid, Park, PedalBike, Person, Pets, Place, PrecisionManufacturing, Public, School, Settings, Shield, SmartToy, SportsEsports, TempleBuddhist, Work } from "@mui/icons-material";
+import { AdsClick, Agriculture, BugReport, Casino, Chat, Draw, FitnessCenter, Hiking, OutdoorGrill, Paid, Park, PedalBike, Person, Pets, Place, PrecisionManufacturing, Public, School, Settings, Shield, SmartToy, SportsEsports, TempleBuddhist, Work } from "@mui/icons-material";
 import ScrollOnceAnimation from "../ScrollOnceAnimation.tsx";
+import { ChessPawnIcon } from "../CustomIcons/ChessIcons.tsx";
 
 export default function AboutMeSection() {
     return (
@@ -31,8 +32,10 @@ export default function AboutMeSection() {
                         <div className="mt-6 grid grid-cols-2 gap-4 px-6 sm:px-8 mb-4">
                             <Tidbit icon={<AdsClick/>}>Archery</Tidbit>
                             <Tidbit icon={<PedalBike/>}>Biking</Tidbit>
+                            <Tidbit icon={<ChessPawnIcon/>}>Chess</Tidbit>
                             <Tidbit icon={<OutdoorGrill/>}>Cooking</Tidbit>
                             <Tidbit icon={<Casino/>}>D&D</Tidbit>
+                            <Tidbit icon={<Draw/>}>Drawing</Tidbit>
                             <Tidbit icon={<FitnessCenter/>}>Exercise</Tidbit>
                             <Tidbit icon={<SportsEsports/>}>Game Design</Tidbit>
                             <Tidbit icon={<Hiking/>}>Hiking</Tidbit>
